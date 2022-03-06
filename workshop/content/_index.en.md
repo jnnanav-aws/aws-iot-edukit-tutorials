@@ -5,7 +5,11 @@ weight = 1
 +++
 
 {{% notice info %}}
-Congratulations to the winners of the [Hackster.io Reinventing Healthy Spaces](https://www.hackster.io/contests/Healthy-Spaces-with-AWS) hackathon! We had over [76 submissions](https://www.hackster.io/contests/Healthy-Spaces-with-AWS/submissions#challengeNav) from over 674 participants, with top winning entries 1) [AWS IoT Vaccine Carrier Cold Box](https://www.hackster.io/mtrobregado/aws-iot-vaccine-carrier-cold-box-9c7fba), 2) [Automatic Ventilation System with CO2 Monitors](https://www.hackster.io/stevekasuya/automatic-ventilation-system-with-co2-monitors-b301f8), and 3) [Tyhac covid-19 audio diagnostic stack](https://www.hackster.io/mick20/tyhac-covid-19-audio-diagnostic-stack-9d5455).
+Congratulations to the winners of the [Hackster.io Reinventing Healthy Spaces](https://www.hackster.io/contests/Healthy-Spaces-with-AWS) hackathon! We had over [76 submissions](https://www.hackster.io/contests/Healthy-Spaces-with-AWS/submissions#challengeNav) from over 674 participants.<br><br>
+The following are the top three winning entries:
+> 1. **[AWS IoT Vaccine Carrier Cold Box](https://www.hackster.io/mtrobregado/aws-iot-vaccine-carrier-cold-box-9c7fba)**
+> 1. **[Automatic Ventilation System with CO2 Monitors](https://www.hackster.io/stevekasuya/automatic-ventilation-system-with-co2-monitors-b301f8)**
+> 1. **[Tyhac covid-19 audio diagnostic stack](https://www.hackster.io/mick20/tyhac-covid-19-audio-diagnostic-stack-9d5455)**
 {{% /notice %}}
 
 ![EduKit Logo](AWS_IoT_EduKIt_Logo-320px_193px.png)
