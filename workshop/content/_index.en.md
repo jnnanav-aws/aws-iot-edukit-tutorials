@@ -14,7 +14,7 @@ The following are the top three winning entries:
 
 ![EduKit Logo](AWS_IoT_EduKIt_Logo-320px_193px.png)
 AWS IoT EduKit is an easy way to learn how to build IoT applications using AWS services through a prescriptive learning program. 
-Students, engineers, and  professionals benefit from hands on practice with the AWS IoT EduKit. These educational resources combine a reference hardware kit with detailed guides and code examples to build IoT applications.
+Students, engineers, and professionals benefit from hands on practice with the AWS IoT EduKit. These educational resources combine a reference hardware kit with detailed guides and code examples to build IoT applications.
 
 ### Benefits of AWS IoT EduKit
 #### Simplified hardware selection

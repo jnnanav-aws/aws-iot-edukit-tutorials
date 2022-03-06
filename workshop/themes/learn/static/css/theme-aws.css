@@ -1,11 +1,11 @@
 
 :root{
 
-    --MAIN-TEXT-color:#232F3E; /* Color of text by default */
+    --MAIN-TEXT-color:#161E2D; /* updated to match aws documentation was set to #232F3E -- Color of text by default */
     --MAIN-TITLES-TEXT-color: #161E2D; /* Color of titles h2-h3-h4-h5 */
-    --MAIN-LINK-color:#95b0ff; /* Color of links */
+    --MAIN-LINK-color:#0073BB; /* updated to match aws documentation. was set to #95b0ff -- Color of links */
     --MAIN-LINK-HOVER-color:#527FFF; /* Color of hovered links */
-    --MAIN-ANCHOR-color: #95b0ff; /* color of anchors on titles */
+    --MAIN-ANCHOR-color: #0073BB; /* updated to match aws documentation. was set to #95b0ff -- color of anchors on titles */
 
     --MENU-HEADER-BG-color:#161E2D; /* Background color of menu header */
     --MENU-HEADER-BORDER-color:#161E2D; /*Color of menu header border */
@@ -235,9 +235,9 @@ div.notices.info p {
     font-size: 14px !important;
     font-weight: normal !important;
     line-height: 1.42857143 !important;
-    text-align: center !important;
+    text-align: justify !important; /* updated to match aws documentation. was set to center */
     white-space: nowrap !important;
-    vertical-align: middle !important;
+    vertical-align: middle !important; 
     -ms-touch-action: manipulation !important;
         touch-action: manipulation !important;
     cursor: pointer !important;
@@ -273,8 +273,8 @@ div.notices.info p {
   .btn-default:focus,
   .btn-default:active {
     color: #fff !important;
-    background-color: #95b0ff !important;
-    border-color: #95b0ff !important;
+    background-color: #0073BB !important; /* updated to match aws documentation. was set to #95b0ff */
+    border-color: #0073BB !important; /* updated to match aws documentation. was set to #95b0ff */
   }
   .btn-default:active {
     background-image: none !important;
