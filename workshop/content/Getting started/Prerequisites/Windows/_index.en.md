@@ -4,7 +4,7 @@ title = "Windows 10 Setup Instructions"
 pre = "› "
 +++
 
-This section shows you how to set up your Windows computer (host machine) to be able to download the code from the GitHub repository, view and edit the code, compile it to be usable by the hardware, and upload it to the hardware's flash memory. These installation steps are sufficient for the **Getting Started** tutorial, which uses Espressif's AWS account and services for the RainMaker platform.
+This section shows you how to set up your Windows computer (host machine) to be able to download the code from the GitHub repository, view and edit the code, compile it to be usable by the hardware, and upload it to the hardware's flash memory. These installation steps are sufficient for the **Getting Started** tutorial, which uses Espressif's AWS account and services for the ESP RainMaker platform.
 
 ## Installing git and git dependencies
 To download the code from the remote code repository on GitHub, you'll need to install [git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F), a widely adopted distributed version control system. It is primarily used for source code management and collaboration—often for tracking file changes or distributing code between a local machine and remote server. To install Git and its dependencies we'll need [OpenSSL](https://www.openssl.org/):
