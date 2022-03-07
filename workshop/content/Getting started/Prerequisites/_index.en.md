@@ -4,7 +4,7 @@ weight = 10
 pre = "<b>a. </b>"
 +++
 
-Welcome to the **Getting Started** environment setup instructions. By following the instructions you will have everything you need to run the ESP RainMaker application on your M5Stack Core2 for AWS IoT EduKit reference hardware and control the virtual smart home devices represented on the hardware kit. In the installation setup steps, you will:
+Welcome to the **Getting Started** environment setup instructions. Once completed, you can run the ESP RainMaker application on your M5Stack Core2 for AWS IoT EduKit reference hardware and control the virtual smart home devices represented on the hardware kit. In the installation setup steps, you will:
 1) Set up your computer for downloading, viewing, and editing accompanying code.
 2) Download tools that enable you to compile and upload device firmware.
 3) Download the ESP RainMaker Phone Apps or RainMaker CLI.
