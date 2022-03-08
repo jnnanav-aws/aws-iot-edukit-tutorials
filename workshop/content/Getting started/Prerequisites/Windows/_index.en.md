@@ -28,41 +28,44 @@ The AWS IoT EduKit communicates with the host machine through a Silicon Labs CP2
 5) Restart your host machine now to make sure the driver is applied.
 
 ## Install Visual Studio Code
-Visual Studio Code (VS Code) is an open source integrated development environment (IDE) that allows you to view, edit, and manage code. Download the latest [VS Code](https://code.visualstudio.com/) software for your operating system. To troubleshoot issues with Visual Studio Code's installation or use, please refer to [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) in their documentation.
+Visual Studio Code (VS Code) is an open source integrated development environment (IDE) that allows you to view, edit, and manage code. Download the latest [VS Code](https://code.visualstudio.com/) software for your operating system. To troubleshoot issues with Visual Studio Code's installation or use, refer to [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) in their documentation.
 
 ## Install PlatformIO
-[PlatformIO](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) (PIO) provides a professional embedded development platform that simplifies embedded software development. This Visual Studio Code extension combines the functionality of the Platform IO command line interface (CLI) with a graphical user interface (GUI). For more information about PIO, and directions to download and install the extension, see [PlatformIO's installation instructions](https://platformio.org/install/ide?install=vscode).
+[PlatformIO](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) (PIO) provides a professional embedded development platform that simplifies embedded software development. This Visual Studio Code extension combines the functionality of the Platform IO command line interface (CLI) with a graphical user interface (GUI). For more information about PIO and directions to download and install the extension, see [PlatformIO's installation instructions](https://platformio.org/install/ide?install=vscode).
 
-Restart VS Code after the PlatformIO extension installation finishes.
+Restart VS Code after the PlatformIO extension installation completes.
 
 ## Clone the code repository
 All of the projects and files exist in a [GitHub repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories), where you can also view the revision history of each file in the repository (repo). To clone the code for the tutorials, you'll use the PIO interface:
-1) Click the **PlatformIO logo** on the VS Code activity bar (left most menu).
-2) From PlatformIO's **Quick Access** menu, under **Miscellaneous**, select **Clone Git Project**.
-3) Paste `https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git` into the text field and then select the location you want to save the project in.
-{{< img "pio-clone_git_project.en.png" "PlatformIO Clone Git Project" "1 - Open PIO menu, 2 - Clone git project, 3 - Paste repository URL" >}}
+1) Choose the **PlatformIO logo** on the VS Code activity bar (left most menu).
+2) From PlatformIO's **Quick Access** menu, expand **Miscellaneous**, and select **Clone Git Project**.
+3) Paste `https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git` into the text field and select the location that you want to save the project.
+{{< img "pio-clone_git_project.en.png" "PlatformIO Clone Git Project" "1 - Open PIO menu, 2 - Clone git project, and 3 - Paste repository URL" >}}
 
 ## Download and install the phone apps
-The ESP RainMaker Phone Apps are available for iOS and Android phones to provide Wi-Fi network configuration, user-creation, user-device association and device control. The apps can be found here:
+The ESP RainMaker Phone Apps are available for iOS and Android phones to provide Wi-Fi network configuration, user-creation, user-device association, and device control. The apps can be found through the following locations:
 * Android: [Google PlayStore](https://play.google.com/store/apps/details?id=com.espressif.rainmaker), [Direct APK](https://github.com/espressif/esp-rainmaker-android/releases)
 * iOS: [Apple App Store](https://apps.apple.com/app/esp-rainmaker/id1497491540)
 
-If you don't have a compatible Android or iOS device, you can use the [RainMaker CLI](https://rainmaker.espressif.com/docs/cli-setup.html) and substitute the provided instructions.
+If you don't have a compatible Android or iOS device, you can follow the [ESP RainMaker CLI Setup](https://rainmaker.espressif.com/docs/cli-setup.html) instructions.
 
 ## Identify the device communication port
-If you haven't already, it's time to unbox the Core2 for AWS IoT EduKit reference hardware and connect it to your host computer's USB 2.0 port using the supplied USB-A to USB-C cable that facilitates communication between them. Additionally, included in the package is a hex key that can be used to install additional modules (sold separately). The device should automatically turn on once you plug it in, but if doesn't, press the power button.
+If you haven't already, unbox the AWS IoT EduKit and connect it to your host computer's USB 2.0 port using the supplied USB-A to USB-C cable. (You do not need to use the hex key that is included. This key is used to install additional modules that are sold separately.) 
+
+The device should automatically turn on when you plug it in. If it doesn't, press the power button.
 ![How to turn M5Stack Core2 for AWS on or off](windows/core2foraws_power_on_off.jpg?width=500px&classes=shadow)
 
-With the device ready and the software for this tutorial installed, let's identify the port your device is virtually mounted to so that you can perform read & write operations to that specific port.
-1) From PlatformIO's **Quick Access** menu, under **PIO Home**, select **Devices**.
-2) Click the icon next to the port with the description "CP2104 USB to UART Bridge Controller" (usually `COM3`) to copy the device port.
+Now that the device is ready and the prerequisite software is installed, let's identify the virtual port your device is using so that you can correctly route read and write operations.
+
+1) From PlatformIO's **Quick Access** menu, expand **PIO Home**, and select **Devices**.
+2) Choose the icon next to the port with the description **CP2104 USB to UART Bridge Controller** (this is usually `COM3`). Copy the device port number.
 
 {{% notice note %}}
-If your Core2 for AWS IoT EduKit does not show up in the list of devices, check that it's powered on and you are using the supplied USB-A to USB-C cable. Some USB-C hubs have compatibility issues with establishing a serial port.
+If your AWS IoT EduKit does not show up in the device list, confirm that it's powered on and you are using the supplied USB-A to USB-C cable. Some USB-C hubs have compatibility issues with establishing a serial port.
 {{% /notice %}}
 
 ## Next
-With everything set up and your host machine ready and able to communicate with the Core2 for AWS IoT EduKit reference hardware, let's continue to the next chapter — [**Running the ESP RainMaker Agent**](/en/getting-started/run-rainmaker.html).
+Now that your host machine can communicate with the AWS IoT EduKit reference hardware, let's continue to the next chapter — [**Run the ESP RainMaker Agent**](/en/getting-started/run-rainmaker.html).
 
 ---
 {{% button href="https://github.com/aws-samples/aws-iot-edukit-tutorials/discussions" icon="far fa-question-circle" %}}Community support{{% /button %}} {{% button href="https://github.com/m5stack/Core2-for-AWS-IoT-EduKit/issues" icon="fas fa-bug" %}}Report bugs{{% /button %}}
