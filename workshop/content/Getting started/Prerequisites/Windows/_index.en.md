@@ -1,39 +1,39 @@
 +++
 linkTitle = "Windows"
-title = "Windows 10 set up instructions"
+title = "Windows 10 Set Up Instructions"
 pre = "› "
 +++
 
 This section provides information to configure your Windows computer (host machine) to download, view, and edit code from the AWS IoT EduKit GitHub repository. When you complete these steps, your computer will be ready to compile and upload code to the hardware's flash memory. Finally, these steps are required to install the ESP RainMaker agent.
 
 ## Install Git and Git dependencies
-To download the code from the remote code repository on GitHub, you need to install [Git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F), which is a widely adopted distributed version control system. Git is commonly used for source code management and collaboration. Git also allowa users to track file changes, and distribute code between a local machine and remote server (for more information, see [About Git](https://git-scm.com/about)). 
+To download the code from the remote code repository on GitHub, you need to install [Git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F), which is a widely adopted distributed version control system. Git is commonly used for source code management and collaboration. Git also allows users to track file changes, and distribute code between a local machine and remote server (for more information, see [About Git](https://git-scm.com/about)). 
 
 Complete the following steps to install OpenSSL, Git, and Git's dependencies:
-1. Download and install [OpenSSL](https://www.openssl.org/source/)
+1. Download and install [OpenSSL](https://www.openssl.org/source/).
 1. Download and install [Git for Windows](https://git-scm.com/download/win).
    * When you install Git for Windows, use the default options and be sure to choose **Use the OpenSSL library** in the *Choosing HTTPS transport backend installer* page.
 
 ![Git for Windows installation wizard. Choose Use the OpenSSL library](windows/git-for-windows-openssl2.png?width=450px&classes=shadow)
 
 ## Set up Silicon Labs USB-to-UART bridge
-The AWS IoT EduKit communicates with the host machine through a Silicon Labs CP210x USB-to-UART bridge. The on-board CP2104 is an USB-to-UART bridge that facilitates host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x translates through a virtual communication port on the host machine it establishes over USB-C. To be able to mount the virtual serial port and communicate across it, you must download and install the corresponding driver.
-1) Ensure the device is not connected to host machine.
+{{< code css >}}The AWS IoT EduKit communicates with the host machine through a Silicon Labs CP210x USB-to-UART bridge. The on-board CP2104 is an USB-to-UART bridge that facilitates host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x translates through a virtual communication port on the host machine it establishes over USB-C. To be able to mount the virtual serial port and communicate across it, you must download and install the corresponding driver.
+1) Ensure the AWS IoT EduKit device is not connected to host machine.
 2) Download the [Windows Silicon Labs CP210x](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip) driver.
 3) Extract the downloaded file.
    {{% notice info %}}
-   You must extract the contents of the folder. The driver will not install if the executable runs within the archive. Also, where you extract the file is not important. 
+   You must extract the contents of the folder. The driver will not install if the executable runs within the archive. Also, where you save the extracted file is not important. 
    {{% /notice %}} 
 4) Run the **CP210xVCPInstaller_x64.exe** installer.
 5) Restart your host machine now to make sure the driver is applied.
-
+{{< /code css >}}
 ## Install Visual Studio Code
-Visual Studio Code (VS Code) is an open source integrated development environment (IDE) which allows you to view, edit, and manage code and more. Download the latest [Visual Studio Code](https://code.visualstudio.com/) for your operating system. To troubleshoot issues with Visual Studio Code installation or usage, please refer to [their documentation](https://code.visualstudio.com/docs/setup/setup-overview).
+Visual Studio Code (VS Code) is an open source integrated development environment (IDE) that allows you to view, edit, and manage code. Download the latest [VS Code](https://code.visualstudio.com/) software for your operating system. To troubleshoot issues with Visual Studio Code's installation or use, please refer to [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) in their documentation.
 
 ## Install PlatformIO
-[PlatformIO](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) (PIO) provides a professional embedded development platform which simplifies embedded software development. The Visual Studio Code extension provides the functionality of the Platform IO command line interface (CLI) in a graphical interface. You can download the extension and read more about PlatformIO [here](https://platformio.org/install/ide?install=vscode).
+[PlatformIO](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) (PIO) provides a professional embedded development platform that simplifies embedded software development. This Visual Studio Code extension combines the functionality of the Platform IO command line interface (CLI) with a graphical user interface (GUI). For more information about PIO, and directions to download and install the extension, see [PlatformIO's installation instructions](https://platformio.org/install/ide?install=vscode).
 
-You must restart VS Code after the PlatformIO extension installation finishes.
+Restart VS Code after the PlatformIO extension installation finishes.
 
 ## Clone the code repository
 All of the projects and files exist in a [GitHub repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories), where you can also view the revision history of each file in the repository (repo). To clone the code for the tutorials, you'll use the PIO interface:
