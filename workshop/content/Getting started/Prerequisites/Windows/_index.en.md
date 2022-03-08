@@ -17,7 +17,7 @@ Complete the following steps to install OpenSSL, Git, and Git's dependencies:
 ![Git for Windows installation wizard. Choose Use the OpenSSL library](windows/git-for-windows-openssl2.png?width=450px&classes=shadow)
 
 ## Set up Silicon Labs USB-to-UART bridge
-{{< code css >}}The AWS IoT EduKit communicates with the host machine through a Silicon Labs CP210x USB-to-UART bridge. The on-board CP2104 is an USB-to-UART bridge that facilitates host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x translates through a virtual communication port on the host machine it establishes over USB-C. To be able to mount the virtual serial port and communicate across it, you must download and install the corresponding driver.
+The AWS IoT EduKit communicates with the host machine through a Silicon Labs CP210x USB-to-UART bridge. The on-board CP2104 is an USB-to-UART bridge that facilitates host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x translates through a virtual communication port on the host machine it establishes over USB-C. To be able to mount the virtual serial port and communicate across it, you must download and install the corresponding driver.
 1) Ensure the AWS IoT EduKit device is not connected to host machine.
 2) Download the [Windows Silicon Labs CP210x](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip) driver.
 3) Extract the downloaded file.
@@ -26,7 +26,7 @@ Complete the following steps to install OpenSSL, Git, and Git's dependencies:
    {{% /notice %}} 
 4) Run the **CP210xVCPInstaller_x64.exe** installer.
 5) Restart your host machine now to make sure the driver is applied.
-{{< /code css >}}
+
 ## Install Visual Studio Code
 Visual Studio Code (VS Code) is an open source integrated development environment (IDE) that allows you to view, edit, and manage code. Download the latest [VS Code](https://code.visualstudio.com/) software for your operating system. To troubleshoot issues with Visual Studio Code's installation or use, please refer to [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) in their documentation.
 
