@@ -82,7 +82,7 @@ Erasing the firmware results in a blank device screen and an audible ticking sou
 ## Conclusion
 Congratulations! During this lesson, you built a connected home application through the AWS IoT EduKit program. Not only that, but you also have the tools necessary to create, edit, compile, and flash embedded code on to your device! In the next tutorials, you'll get more hands-on practice and will learn the skills to start building your own end-to-end IoT solutions.
 
-On to [**Blinky Hello World**](/en/blinky-hello-world.html).
+On to [**Blinky Hello World**](/en/blinky-hello-world.html)!
 
 ---
 {{% button href="https://github.com/aws-samples/aws-iot-edukit-tutorials/discussions" icon="far fa-question-circle" %}}Community support{{% /button %}} {{% button href="https://github.com/m5stack/Core2-for-AWS-IoT-EduKit/issues" icon="fas fa-bug" %}}Report bugs{{% /button %}}
