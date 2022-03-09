@@ -6,9 +6,11 @@ pre = "› "
 
 This section provides information to configure your Windows computer (host machine) to download, view, and edit code from the AWS IoT EduKit GitHub repository. When you complete these steps, your computer will be ready to compile and upload code to the hardware's flash memory. Finally, these steps are required to install the ESP RainMaker agent.
 
-## Install Git and Git dependencies
-To download the code from the remote code repository on GitHub, you need to install [Git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F), which is a widely adopted distributed version control system. Git is commonly used for source code management and collaboration. Git also allows users to track file changes, and distribute code between a local machine and remote server (for more information, see [About Git](https://git-scm.com/about)). 
+## Install Git and its dependencies
+ Git is a widely adopted distributed version control system, and is commonly used for source code management and collaboration. Git also allows users to track file changes, and distribute code between a local machine and remote server (for more information, see [About Git](https://git-scm.com/about)).
 
+OpenSSL provides a toolkit for secure communication to the Git repository (for more information, see [OpenSSL](https://www.openssl.org/))
+ 
 Complete the following steps to install OpenSSL, Git, and Git's dependencies:
 1. Download and install [OpenSSL](https://www.openssl.org/source/).
 1. Download and install [Git for Windows](https://git-scm.com/download/win).

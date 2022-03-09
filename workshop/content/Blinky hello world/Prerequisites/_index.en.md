@@ -4,13 +4,13 @@ weight = 10
 pre = "<b>a. </b>"
 +++
 
-In this chapter, you'll download and install the [AWS CLI](https://aws.amazon.com/cli/) for your host machine's operating system, retrieve AWS [Identity and Access Management](https://aws.amazon.com/iam/) (IAM) user access credentials to manage services with the AWS CLI, configure the AWS CLI, and finally test that the AWS CLI is working properly. This tutorial assumes that you have an [AWS account](https://console.aws.amazon.com/console/home) and you have completed [setting up your environment](../getting-started/prerequisites.html). If you already have the AWS CLI (version 1 or version 2) installed and configured on your machine, skip to the [test section](#testing-the-aws-cli).
+In this chapter, you'll download and install the [AWS CLI](https://aws.amazon.com/cli/) for your host machine's operating system, retrieve AWS [Identity and Access Management](https://aws.amazon.com/iam/) (IAM) user access credentials to manage services with the AWS CLI, configure the AWS CLI, and finally test that the AWS CLI is working properly. This tutorial assumes that you have an [AWS account](https://console.aws.amazon.com/console/home) and you have completed [setting up your environment](../getting-started/prerequisites.html). If you already have the AWS CLI (version 1 or version 2) installed and configured on your machine, skip to [Testing the AWS CLI](#testing-the-aws-cli).
 
 ## Open the PlatformIO CLI Terminal Window
 In the [Getting Started](../getting-started.html) tutorial, you installed and used PIO and the PIO terminal window. It is important to continue to use the PIO terminal window for all subsequent steps. The PIO terminal window pre-loads additional applications and libraries that your standard terminal/command prompt might not have. 
 
-If you've closed VS Code or don't have the terminal viewport with the PlatformIO CLI loaded in VS Code, follow the steps below after opening VS Code:
-1) Click the **PlatformIO logo** on the VS Code activity bar (left most menu).
+If you closed VS Code or don't have the terminal viewport with the PlatformIO CLI loaded in VS Code, complete the following the steps below after opening VS Code:
+1) Choose the **PlatformIO logo** on the VS Code activity bar (left most menu).
 2) From the **Quick Access** menu, under **Miscellaneous**, select **New Terminal**. The terminal viewport should load with a new terminal labeled **PlatformIO CLI**.
 {{< img "pio-new_terminal-alexa_intro.en.png" "PlatformIO CLI terminal in VS Code" "1 - Open PIO menu, 2 - Open new PIO Terminal, 3 - Verify you're in the 'PlatformIO CLI' terminal session">}}
 
