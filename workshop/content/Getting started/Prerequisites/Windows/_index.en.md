@@ -39,7 +39,7 @@ Download and install the latest [VS Code](https://code.visualstudio.com/) softwa
 ## Install PlatformIO
 [PlatformIO](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) (PIO) provides a professional embedded development platform that simplifies embedded software development. This VS Code extension combines the functionality of the Platform IO command line interface (CLI) with a graphical user interface (GUI). 
 
-Complete the steps outlined in [PlatformIO's installation instructions](https://platformio.org/install/ide?install=vscodeDownload to download and install the VS Code extension. 
+Complete the steps outlined in [PlatformIO's installation instructions](https://platformio.org/install/ide?install=vscodeDownload) to download and install the VS Code extension. 
 
 Restart VS Code after the PIO installation completes.
 
@@ -49,7 +49,11 @@ All of the projects exist in a [GitHub repository](https://docs.github.com/en/gi
 Complete the following steps to clone the code for the tutorials:
 1. Choose the **PlatformIO logo** on the VS Code activity bar.
 1. Open PlatformIO's **Quick Access** menu, expand **Miscellaneous**, and choose **Clone Git Project**.
-1. Paste `https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git` into the text field and select the location that you want to save the project.
+1. Copy the following URL and paste it into the target field at the top of the page.
+   ```
+   bash https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
+   ```
+1. Select the location that you want to save the project.
 {{< img "pio-clone_git_project.en.png" "PlatformIO Clone Git Project" "1 - Open PIO menu, 2 - Choose Clone Git Project, and 3 - Paste the repository URL" >}}
 
 ## Download and install the phone apps

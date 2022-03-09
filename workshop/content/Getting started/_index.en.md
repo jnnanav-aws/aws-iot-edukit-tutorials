@@ -9,7 +9,7 @@ Welcome to the AWS IoT EduKit tutorial series. This series presents smart home s
 
 To complete these exercises, you use can use either ESP RainMaker's smartphone application (through iOS or Android), or their command line utility. The Getting Started exercise helps you to prepare your environment and install required software. 
 
-These tutorials do not require an AWS account and are indended to provide a quick demonstration of an embedded application that is enriched by connectivity to AWS IoT. The solutions you create use the ESP RainMaker platform, which is powered by AWS, to provide a customizable smart home application without managing the infrastructure. There is no additional cost to using Espressif's ESP RainMaker Platform.
+These tutorials do not require an AWS account and are intended to provide a quick demonstration of an embedded application that is enriched by connectivity to AWS IoT. The solutions you create use the ESP RainMaker platform, which is powered by AWS, to provide a customizable smart home application without managing the infrastructure. There is no additional cost to using Espressif's ESP RainMaker Platform.
 
 The Getting Started exercise is also required before attempting the others; afterward, you can complete the exercises in the series in any order, or only the ones that most interest you.
 
