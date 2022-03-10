@@ -9,18 +9,18 @@ In this tutorial, you will configure your reference hardware into a smart thermo
 
 Assumptions. Before starting this tutorial, verify the following prerequisites:
 1. You have an [M5Stack Core2 ESP32 IoT Development Kit for AWS IoT EduKit](https://www.amazon.com/dp/B08VGRZYJR/).
-2. You have an AWS account that is not running any production workloads (i.e. an account safe for sandbox and evaluation purposes).
-3. You have a user login or role to the AWS account with administrator access.
-4. Your Core2 for AWS IoT EduKit has been provisioned in AWS IoT Core and is already communicating with AWS via MQTT. Start with the [**Blinky Hello World**](/en/blinky-hello-world.html) tutorial if you have not completed provisioning and established connectivity.
-5. You have at least a basic technical understanding of AWS IoT messaging concepts such as topics, publishing, and subscribing.
+1. You have an AWS account that is not running any production workloads (i.e. an account safe for sandbox and evaluation purposes).
+1. You have a user login or role to the AWS account with administrator access.
+1. Your Core2 for AWS IoT EduKit has been provisioned in AWS IoT Core and is already communicating with AWS via MQTT. Start with the [**Blinky Hello World**](/en/blinky-hello-world.html) tutorial if you have not completed provisioning and established connectivity.
+1. You have at least a basic technical understanding of AWS IoT messaging concepts such as topics, publishing, and subscribing.
 
 Learning Objectives. By the end of this lab, you should know:
 1. How to acquire temperature and sound levels from the Core2 for AWS IoT EduKit device.
-2. How to publish temperature and sound measurements from the device to AWS IoT Core.
-3. How to report measured values to the device shadow.
-4. How to perform message transforms with the AWS IoT Core rules engine.
-5. How to build a serverless application that responds to inputs and detects complex events.
-6. How to send commands to your device via the device shadow.
+1. How to publish temperature and sound measurements from the device to AWS IoT Core.
+1. How to report measured values to the device shadow.
+1. How to perform message transforms with the AWS IoT Core rules engine.
+1. How to build a serverless application that responds to inputs and detects complex events.
+1. How to send commands to your device via the device shadow.
 
 To get started with this tutorial, go to the first chapter, [**Introduction**](/en/smart-thermostat/introduction.html).
 

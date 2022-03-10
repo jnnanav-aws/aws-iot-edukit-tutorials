@@ -4,17 +4,22 @@ weight = 10
 pre = "<b>a. </b>"
 +++
 
-In this chapter, you'll download and install the [AWS CLI](https://aws.amazon.com/cli/) for your host machine's operating system, retrieve AWS [Identity and Access Management](https://aws.amazon.com/iam/) (IAM) user access credentials to manage services with the AWS CLI, configure the AWS CLI, and finally test that the AWS CLI is working properly. This tutorial assumes that you have an [AWS account](https://console.aws.amazon.com/console/home) and you have completed [setting up your environment](../getting-started/prerequisites.html). If you already have the AWS CLI (version 1 or version 2) installed and configured on your machine, skip to [Testing the AWS CLI](#testing-the-aws-cli).
+In this section, you download and install the [AWS CLI](https://aws.amazon.com/cli/) for your host machine's operating system, retrieve AWS [Identity and Access Management](https://aws.amazon.com/iam/) (IAM) user access credentials to manage services with the AWS CLI, configure the AWS CLI, and finally test that the AWS CLI is working properly. 
 
-## Open the PlatformIO CLI Terminal Window
-In the [Getting Started](../getting-started.html) tutorial, you installed and used PIO and the PIO terminal window. It is important to continue to use the PIO terminal window for all subsequent steps. The PIO terminal window pre-loads additional applications and libraries that your standard terminal/command prompt might not have. 
+{{% notice info%}}
+If you already have the AWS CLI (version 1 or version 2) installed and configured on your machine, skip to [Test the AWS CLI](#testing-the-aws-cli).
+{{% /notice %}}
 
-If you closed VS Code or don't have the terminal viewport with the PlatformIO CLI loaded in VS Code, complete the following the steps below after opening VS Code:
-1) Choose the **PlatformIO logo** on the VS Code activity bar (left most menu).
-2) From the **Quick Access** menu, under **Miscellaneous**, select **New Terminal**. The terminal viewport should load with a new terminal labeled **PlatformIO CLI**.
-{{< img "pio-new_terminal-alexa_intro.en.png" "PlatformIO CLI terminal in VS Code" "1 - Open PIO menu, 2 - Open new PIO Terminal, 3 - Verify you're in the 'PlatformIO CLI' terminal session">}}
+## Open the PlatformIO CLI terminal window
+In the [Getting Started](../getting-started.html) tutorial, you installed and used Platform IO (PIO) and the PIO terminal window. The PIO terminal window pre-loads additional applications and libraries that your standard terminal/command prompt might not have. It is important to continue to use the PIO terminal window for all subsequent steps. 
 
-## Downloading and Installing the AWS CLI
+If you closed Visual Studio Code (VS Code) or don't have the terminal viewport with the PlatformIO CLI displayed, complete the following the steps:
+1. Open VS Code, if necessary.
+1. Choose the **PlatformIO logo** on the VS Code activity bar.
+1. From the **Quick Access** menu, expand **Miscellaneous**, and select **New Terminal**. The terminal viewport should load with a new terminal labeled *PlatformIO CLI*.
+{{< img "pio-new_terminal-alexa_intro.en.png" "PlatformIO CLI terminal in VS Code" "1 - Open PIO menu, 2 - Open a new PIO Terminal, 3 - Verify that you have a 'PlatformIO CLI' terminal session">}}
+
+## Download and nstall the AWS CLI
 The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts. To be able to configure the AWS CLI, you'll first need to have an AWS account. Please [sign in to AWS console](https://console.aws.amazon.com/console/home) or [create an AWS account](https://portal.aws.amazon.com/billing/signup#/start) before proceeding.
 
 {{%expand "Ubuntu Linux v18.0+ (64-bit)" %}}
@@ -41,7 +46,7 @@ Download and install the latest AWS CLI version 2 for 64-bit Linux:
 
 To retrieve your IAM user's access credentials, follow the [official docs](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config).
 
-## Configuring the AWS CLI
+## Configure the AWS CLI
 With the AWS CLI installed and the IAM user access credentials in hand, it's time to configure the AWS CLI. One of the settings you'll configure is the AWS [region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html). It's important to keep in mind that the region you're currently using stays consistent—for purposes of this tutorial, we are standardizing on **us-west-2**. Using a different region or unknowingly changing regions can cause other challenges in subsequent steps, such as [regional service availability](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
 
 To configure the AWS CLI on your host machine, enter the following command in the terminal viewport:
@@ -57,7 +62,7 @@ Default region name [None]: us-west-2
 Default output format [None]: json
 ```
 
-## Testing the AWS CLI
+## Test the AWS CLI
 With everything configured as described above, it is now time to test your AWS CLI to ensure it is working properly. First, you will verify the CLI is installed, and then validate the configuration.
 
 To check the CLI is installed correctly, we will use the version option. A successful installation will output the AWS CLI version (if you receive errors, visit the [troubleshooting guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-troubleshooting.html)):

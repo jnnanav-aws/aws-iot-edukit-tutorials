@@ -10,14 +10,14 @@ In this tutorial, you will extend the smart thermostat solution from the previou
 Assumptions. Before starting this lab, verify the following prerequisites:
 1. You have a M5Stack Core2 ESP32 IoT Development Kit for AWS IoT EduKit.
 2. You have an AWS account that is not running any production workloads (i.e. an account safe for sandbox and evaluation purposes).
-3. You have a user login or role to the AWS account with administrator access.
-3. Your Core2 for AWS IoT EduKit has been provisioned in AWS IoT Core and is already communicating with AWS via MQTT. Start with the [**Smart Thermostat**](/en/smart-thermostat.html) tutorial if you have not already completed that baseline of functionality.
+1. You have a user login or role to the AWS account with administrator access.
+1. Your Core2 for AWS IoT EduKit has been provisioned in AWS IoT Core and is already communicating with AWS via MQTT. Start with the [**Smart Thermostat**](/en/smart-thermostat.html) tutorial if you have not already completed that baseline of functionality.
 
 Learning Objectives. By the end of this lab, you should know:
 1. How to forward device telemetry to AWS IoT Analytics for storage, transformation, and creating analytical data sets.
-2. How to use Amazon SageMaker Studio to create an experiment that automatically generates a machine learning model from your data sets.
-3. How to deploy a machine learning model to a consumable API endpoint.
-4. How a serverless function consumes an ML inference API to augment an application.
+1. How to use Amazon SageMaker Studio to create an experiment that automatically generates a machine learning model from your data sets.
+1. How to deploy a machine learning model to a consumable API endpoint.
+1. How a serverless function consumes an ML inference API to augment an application.
 
 Let's begin with the [**Introduction**](/en/smart-spaces/introduction.html).
 

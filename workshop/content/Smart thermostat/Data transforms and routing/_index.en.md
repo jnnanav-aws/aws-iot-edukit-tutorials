@@ -4,7 +4,7 @@ weight = 40
 pre = "<b>d. </b>"
 +++
 
-## Chapter introduction
+## Introduction
 By the end of this chapter, your cloud solution should do the following:
 
 * Transform raw sound data received from the device into actionable intelligence of room occupancy with application logic stored in the cloud
@@ -12,8 +12,8 @@ By the end of this chapter, your cloud solution should do the following:
 * Set up a resource in AWS IoT Events to receive messages from your device
 * Forward messages published by the thermostat device to AWS IoT Events for further processing 
 
-## How to set up the cloud solution
-### Deriving room occupancy from sound
+## Set up the cloud solution
+### Derive room occupancy from sound
 The first part of your cloud solution is to add the intelligence that determines whether the room is occupied using the sound level reported by the smart thermostat device. If the sampled sound level is over a given threshold, you will mark the room as occupied. If it is under the threshold, you will mark the room as unoccupied. You can store this status in the device shadow and use that to sync changes back down to the device.
 
 Why use sound level and simple threshold banding to classify room occupancy? Why not use a motion sensor? In this case, a microphone is the sensor that is available for use. When designing IoT solutions, you will not always have the budget for the best possible input data. This approach strikes a balance of frugality and achieving the use case. The author acknowledges this would not work for every use case, such as a team meeting for people who are using sign language, or for team meetings that start with a silent document review.
@@ -25,17 +25,17 @@ You can combine topic rules and device shadows to make updates to the device sha
 Your first milestone in this chapter is to create an IoT Core topic rule that receives the messages published by your smart thermostat, inspects the sampled sound level, and updates the room occupancy state of your device shadow when this changes. The topic rule will use conditional logic in the SQL query to construct a new payload and the IoT Core republish action to send the new payload to the device shadow. 
 
 1. Go to the AWS IoT Core management console, choose *Act*, choose *Rules*, and choose **Create**.
-2. Give your rule a name and description. Further steps in this material assume the name is `thermostatRule`.
-3. Use the following query and be sure to replace **<<CLIENT_ID>>** with your device client Id/serial number.
+1. Give your rule a name and description. Further steps in this material assume the name is `thermostatRule`.
+1. Use the following query and be sure to replace **<<CLIENT_ID>>** with your device client Id/serial number.
 ```SQL
 SELECT CASE state.reported.sound > 10 WHEN true THEN true ELSE false END AS state.desired.roomOccupancy FROM '$aws/things/<<CLIENT_ID>>/shadow/update/accepted' WHERE state.reported.sound <> Null
 ```
 4. Choose **Add action**.
-5. Select *Republish a message to an AWS IoT topic* and choose **Configure action**.
-6. For *Topic*, use `$$aws/things/<<CLIENT_ID>>/shadow/update`. Be sure to replace **<<CLIENT_ID>>** with your device's client Id/serial number.
-7. For *Choose or create a role to grant AWS IoT access to perform this action.* choose **Create Role** and in the pop-up give your new IAM role a name, then choose **Create role**.
-8. Choose **Add action** to finish configuring your action and return to the rule creation form.
-9. Click **Create Rule** to create this rule in AWS IoT rules engine.
+1. Select *Republish a message to an AWS IoT topic* and choose **Configure action**.
+1. For *Topic*, use `$$aws/things/<<CLIENT_ID>>/shadow/update`. Be sure to replace **<<CLIENT_ID>>** with your device's client Id/serial number.
+1. For *Choose or create a role to grant AWS IoT access to perform this action.* choose **Create Role** and in the pop-up give your new IAM role a name, then choose **Create role**.
+1. Choose **Add action** to finish configuring your action and return to the rule creation form.
+1. Click **Create Rule** to create this rule in AWS IoT rules engine.
 
 Let's break down this rule and explain the parts. The SELECT clause uses a CASE statement to achieve our simple threshold banding. If the sound level reported by the device is over 10 (on a scale of 0-255), then we treat this as an occupied room. You can modify the 10 to set your solution's threshold for an occupied room based on the observed degree of ambient noise.
 
@@ -51,7 +51,7 @@ The action of this rule is "republish" or in other words, publish the output of 
 
 Once you have deployed this rule in IoT Core, you should start to see the room occupancy status updated in the serial monitor output (`pio run --environment core2foraws --target monitor`).
 
-### Preparing to determine commands for HVAC
+### Prepare to determine commands for HVAC
 The next milestone in this chapter is to prepare the cloud infrastructure needed to dictate new HVAC states (e.g. heating/cooling/standby) based on current temperature and room occupancy. You will provision the IoT Events service to receive messages and then create a second IoT Core rule to integrate with IoT Events. This will create the data flow from IoT Core to IoT Events that is necessary before you move on to create the detector model that dictates the HVAC state.
 
 IoT Events has two resource types: inputs and detector models. An input is a pre-defined schema for mapping inbound messages to detector models. A detector model is a finite state machine that processes messages from one or more inputs and determines if the state of the model should change. 
@@ -96,7 +96,7 @@ SELECT current.state as current.state, current.version as current.version, times
 
 This rule is much simpler compared to the previous one! The rule is configured to receive the full JSON document whenever the smart thermostat device shadow is updated, then forward it to your new IoT Events Input. The Input is configured to parse only a few of the fields from the device shadow document and will discard the unneeded ones.
 
-## Validation steps
+## Validation
 Before moving on to the next chapter, you can validate that your solution is configured as intended by:
 
 1. As your thermostat device detects varying noise levels, you should see the device receive updated status of roomOccupancy from your rule. Try alternating playing some music to make noise for ten seconds and being quiet for ten seconds to see the state change in the serial monitor (`pio run --environment core2foraws --target monitor`).

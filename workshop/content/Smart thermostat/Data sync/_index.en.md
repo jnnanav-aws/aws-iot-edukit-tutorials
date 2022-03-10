@@ -4,13 +4,13 @@ weight = 30
 pre = "<b>c. </b>"
 +++
 
-## Chapter introduction
+## Introduction
 By the end of this chapter, your Core2 for AWS IoT EduKit reference hardware kit should do the following:
 
 * Publish the sampled ambient noise level and room temperature to AWS IoT Core every 10 seconds
 * Subscribe to your device's shadow in AWS IoT Core to receive new commands
 
-## Messaging concepts
+## Messaging
 In this chapter, you will connect your device to your custom AWS IoT Core endpoint, then exchange messages between the device and cloud in a model called publish and subscribe, or "PubSub." AWS IoT Core is heavily based on a protocol called [Message Queueing Telemetry Transport](https://mqtt.org/) (MQTT). From the home page:
 
 > MQTT is an OASIS standard messaging protocol for the Internet of Things (IoT). It is designed as an extremely lightweight publish/subscribe messaging transport that is ideal for connecting remote devices with a small code footprint and minimal network bandwidth. MQTT today is used in a wide variety of industries, such as automotive, manufacturing, telecommunications, oil and gas, etc. 
@@ -77,7 +77,7 @@ This means when your device next connects to AWS IoT Core, or if it is already c
 
 Your smart thermostat will report the latest values of temperature and noise level as reviewed in the previous chapter. Your thermostat will also receive commands and track the state of two more values called "hvacStatus" and "roomOccupancy". These values will be determined by the cloud application in the coming chapters.
 
-## How to program publishing messages to AWS IoT Core
+## Publishing messages to AWS IoT Core
 You will use the AWS IoT Device SDK for Embedded C ("C-SDK") to communicate between your smart thermostat device and AWS IoT Core. This is a best practice for abstracting away security, network, and data layers so you can focus on the application logic of your device and solution. The C-SDK bundles libraries for connecting to AWS IoT Core over the MQTT protocol, interfacing with the hardware secure element to sign requests, and for integrating with higher order features like the device shadow.
 
 Let's look at a few critical lines of code and analyze what they do.
@@ -166,17 +166,17 @@ The `IOTUNUSED()` function is used to suppress compiler warnings for unused para
 
 The if/else block is used to evaluate the text value of the new **hvacStatus** key-value and uses that to determine the color of the LED strips.
 
-## Monitoring the Device Serial Output
+## Monitor the device serial output
 If you closed the serial monitor from the last chapter by pressing the **CTRL** + **C** keystroke or disconnected the device, you will need to restart the serial monitor. With the device connected, run the serial monitor by pasting the following command in the [PlatformIO CLI terminal window](../blinky-hello-world/prerequisites.html#open-the-platformio-cli-terminal-window):
 ```bash
 pio run --environment core2foraws --target monitor
 ```
 
-## Validation steps
+## Validation
 Before moving on to the next chapter, you can validate that your device is configured as intended:
 
 1. Open the AWS IoT Core console test page, subscribe to the topic `$aws/things/<<CLIENT_ID>>/shadow/update/accepted` and you should see new messages arriving in time with your **vTaskDelay()**. (Replace <<CLIENT_ID>> with your device client Id/serial number printed on the screen.)
-2. Open the AWS IoT Core console test page, publish a new shadow message on the topic `$aws/things/<<CLIENT_ID>>/shadow/update`. You should see the Core for AWS IoT EduKit's LED bars change from blue, to red, to off to represent the **COOLING**, **HEATING**, and **STANDBY** published values. See below for a sample shadow message. Test the effects by toggling the **hvacStatus** (set to **HEATING** or **COOLING**) and/or **roomOccupied** values (set to **true** or **false**) each time you publish the message.
+1. Open the AWS IoT Core console test page, publish a new shadow message on the topic `$aws/things/<<CLIENT_ID>>/shadow/update`. You should see the Core for AWS IoT EduKit's LED bars change from blue, to red, to off to represent the **COOLING**, **HEATING**, and **STANDBY** published values. See below for a sample shadow message. Test the effects by toggling the **hvacStatus** (set to **HEATING** or **COOLING**) and/or **roomOccupied** values (set to **true** or **false**) each time you publish the message.
 
 ```
 { "state": { "desired": { "hvacStatus": "HEATING", "roomOccupancy": true } } }

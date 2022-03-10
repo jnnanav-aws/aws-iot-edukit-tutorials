@@ -8,7 +8,7 @@ Hopefully you enjoyed the journey of building your cloud connected blinky projec
 
 While the AWS IoT EduKit program does not teach C or require it, it is critical for embedded development. The control and flexibility from the lower level code allows you to gain the maximum potential from your hardware. If you are not familiar with C programming but curious to learn or if you are a bit rusty and want dive into the application code we provide in this program, Jens Gustedt provides [Modern C](https://modernc.gforge.inria.fr/) under the Creative Commons license and it is free to [download](https://modernc.gforge.inria.fr/download.html). 
 
-## What's Happening on the Device
+## What's happening on the device
 ## The FreeRTOS Kernel
 The application on the device runs using the [FreeRTOS kernel](https://www.freertos.org/)—[a real-time operating system](https://www.freertos.org/about-RTOS.html) (RTOS). It is bundled into the binary you compiled (as well as other libraries and drivers) with your application code. The FreeRTOS kernel schedules a block of sequential code as a [task](https://www.freertos.org/taskandcr.html) to give it a share of processor run time. There are tasks that typically loop forever to create messages to be sent to AWS, process received messages, update the display, blink the LEDs, etc. 
 
