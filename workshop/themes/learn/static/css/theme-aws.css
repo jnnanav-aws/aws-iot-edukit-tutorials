@@ -1,8 +1,8 @@
 
 :root{
 
-    --MAIN-TEXT-color:#161E2D; /* updated to match aws documentation was set to #232F3E -- Color of text by default */
-    --MAIN-TITLES-TEXT-color: #161E2D; /* Color of titles h2-h3-h4-h5 */
+    --MAIN-TEXT-color:#000000; /* i thought it was - 161E2D. but not sure. updated to match aws documentation was set to #232F3E -- Color of text by default */
+    --MAIN-TITLES-TEXT-color: #000000; /* Color of titles h2-h3-h4-h5 */
     --MAIN-LINK-color:#0073BB; /* updated to match aws documentation. was set to #95b0ff -- Color of links */
     --MAIN-LINK-HOVER-color:#527FFF; /* Color of hovered links */
     --MAIN-ANCHOR-color: #0073BB; /* updated to match aws documentation. was set to #95b0ff -- color of anchors on titles */
@@ -32,7 +32,7 @@
     font-family: 'Amazon Ember';
     src: url("https://fonts.workshops.aws/webfonts/AmazonEmber_W_Lt.eot");
     src: url("https://fonts.workshops.aws/webfonts/AmazonEmber_W_Lt.eot?#iefix") format("embedded-opentype"), url("https://fonts.workshops.aws/webfonts/AmazonEmber_W_Lt.woff2") format("woff2"), url("https://fonts.workshops.aws/webfonts/AmazonEmber_W_Lt.woff") format("woff");
-    font-style: normal;
+    font-style: n;
     font-weight: 200;
 }
 
@@ -99,7 +99,7 @@ a:hover {
 }
 
 #sidebar #footer h3.github-title {
-  font-size: 14px;
+  font-size: 14;
   margin: 10px 0px 5px;
   padding: 0px;
   text-transform: uppercase;
@@ -187,8 +187,8 @@ a:hover {
 div.notices p:first-child:before {
     position: absolute;
     top: 2px;
-    color: #fff;
-    font-family: 'Font Awesome\ 5 Free';
+    color: #FC4242/* was #fff */;
+    font-family: "Amazon Ember" /* was 'Font Awesome\ 5 Free' */;
     content: #F06A;
     font-weight: 900; /* Fix version 5.0.9 */
     left: 10px;
@@ -235,7 +235,7 @@ div.notices.info p {
     font-size: 14px !important;
     font-weight: normal !important;
     line-height: 1.42857143 !important;
-    text-align: justify !important; /* updated to match aws documentation. was set to center */
+    text-align: left !important; /* updated to match aws documentation. was set to center */
     white-space: nowrap !important;
     vertical-align: middle !important; 
     -ms-touch-action: manipulation !important;
