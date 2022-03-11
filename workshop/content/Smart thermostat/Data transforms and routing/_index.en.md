@@ -26,13 +26,13 @@ Your first milestone in this chapter is to create an IoT Core topic rule that re
 
 1. Go to the AWS IoT Core management console, choose *Act*, choose *Rules*, and choose **Create**.
 1. Give your rule a name and description. Further steps in this material assume the name is `thermostatRule`.
-1. Use the following query and be sure to replace **<<CLIENT_ID>>** with your device client Id/serial number.
+1. Use the following query and be sure to replace **<<CLIENT_ID>>** with your device client ID/serial number.
 ```SQL
 SELECT CASE state.reported.sound > 10 WHEN true THEN true ELSE false END AS state.desired.roomOccupancy FROM '$aws/things/<<CLIENT_ID>>/shadow/update/accepted' WHERE state.reported.sound <> Null
 ```
 4. Choose **Add action**.
 1. Select *Republish a message to an AWS IoT topic* and choose **Configure action**.
-1. For *Topic*, use `$$aws/things/<<CLIENT_ID>>/shadow/update`. Be sure to replace **<<CLIENT_ID>>** with your device's client Id/serial number.
+1. For *Topic*, use `$$aws/things/<<CLIENT_ID>>/shadow/update`. Be sure to replace **<<CLIENT_ID>>** with your device's client ID/serial number.
 1. For *Choose or create a role to grant AWS IoT access to perform this action.* choose **Create Role** and in the pop-up give your new IAM role a name, then choose **Create role**.
 1. Choose **Add action** to finish configuring your action and return to the rule creation form.
 1. Click **Create Rule** to create this rule in AWS IoT rules engine.
@@ -83,7 +83,7 @@ Follow these steps to create the input resource in IoT Events:
 Now that the input resource is created in IoT Events, you can return to IoT Core to create a new rule that will forward device shadow updates to it that you will use to create the HVAC control application. You will create the control application in the next chapter.
 1. Go back to [AWS IoT Core management console](https://us-west-2.console.aws.amazon.com/iot/home?region=us-west-2#/), choose *Act*, choose *Rules* and choose **Create**.
 2. Give your rule a name and description.
-3. Use this statement for the query and be sure to replace **<<CLIENT_ID>>** with your device's client Id/serial number: 
+3. Use this statement for the query and be sure to replace **<<CLIENT_ID>>** with your device's client ID/serial number: 
 ```SQL
 SELECT current.state as current.state, current.version as current.version, timestamp FROM '$aws/things/CLIENT_ID/shadow/update/documents'
 ```

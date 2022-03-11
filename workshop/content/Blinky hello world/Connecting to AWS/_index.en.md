@@ -9,7 +9,7 @@ In this section you configure, build, and flash your device's firmware so that y
 Establishing a secure MQTT connection is simplified with the [AWS IoT Device SDK for Embedded C](https://github.com/espressif/aws-iot-device-sdk-embedded-C/tree/61f25f34712b1513bf1cb94771620e9b2b001970) and the [Microchip ATECC608 Trust&GO](https://www.microchip.com/wwwproducts/en/ATECC608B-TNGTLS) pre-provisioned, secure hardware certificates. With the secure element, you do not need to retrieve certificates from AWS IoT Core or generate your own to connect. The connectivity libraries in the AWS IoT Device SDK for Embedded C simplify connectivity and access to AWS IoT services and features.
 
 ## Configure the ESP32 firmware
-Your source code configuration is handled through [Kconfig](https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html). Kconfig is the same configuration system used by the Linux kernel and helps to simplify available configuration options ([symbols](https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html)) into a tree structure. 
+Your source code configuration is handled through [Kconfig](https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html). The Linux kernel also uses Kconfig configuration system to simplify their configuration options ([symbols](https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html)) into a tree structure. 
 
 Complete the following steps to open the KConfig menu:
 1. Return to the VS Client with the PIL terminal window open. 

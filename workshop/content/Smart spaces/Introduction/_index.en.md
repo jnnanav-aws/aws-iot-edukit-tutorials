@@ -30,7 +30,7 @@ The workflow that you will deliver in this module has the following key componen
 ## Let's go!
 Are you ready to start building? Let's review you have the following prerequisites sorted:
 1. Have you completed the [**Smart Thermostat**](../smart-thermostat.html) module in this set of tutorials? 
-2. Have you confirmed that you can see messages arriving from your smart thermostat using a test client like the one in the AWS IoT Core console? You should be able to subscribe to the topic `$aws/things/<<CLIENT_ID>>/shadow/update/accepted` (replacing <<CLIENT_ID>> with your device's client Id/serial number) and see messages arrive in the test client.
+2. Have you confirmed that you can see messages arriving from your smart thermostat using a test client like the one in the AWS IoT Core console? You should be able to subscribe to the topic `$aws/things/<<CLIENT_ID>>/shadow/update/accepted` (replacing <<CLIENT_ID>> with your device's client ID/serial number) and see messages arrive in the test client.
 
 If so, let's begin by moving on to the next chapter, [**Data routing and storage**](/en/smart-spaces/data-routing-and-storage.html).
 

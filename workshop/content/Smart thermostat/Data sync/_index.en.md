@@ -120,7 +120,7 @@ rc = aws_iot_shadow_update(&iotCoreClient,
   ShadowUpdateStatusCallback, NULL, 4, true);
 ```
 
-This code actually publishes the marshalled shadow document as a payload over the network to IoT Core on the topic `$aws/things/<<CLIENT_ID>>/shadow/update`. The definition of **<<CLIENT_ID>>** resolves to the client Id/serial number of your Core2 for AWS device as displayed on your device screen and in the serial monitor output.
+This code actually publishes the marshalled shadow document as a payload over the network to IoT Core on the topic `$aws/things/<<CLIENT_ID>>/shadow/update`. The definition of **<<CLIENT_ID>>** resolves to the client ID/serial number of your Core2 for AWS device as displayed on your device screen and in the serial monitor output.
 
 ```C
 while(NETWORK_ATTEMPTING_RECONNECT == rc || NETWORK_RECONNECTED == rc || SUCCESS == rc) {
@@ -175,7 +175,7 @@ pio run --environment core2foraws --target monitor
 ## Validation
 Before moving on to the next chapter, you can validate that your device is configured as intended:
 
-1. Open the AWS IoT Core console test page, subscribe to the topic `$aws/things/<<CLIENT_ID>>/shadow/update/accepted` and you should see new messages arriving in time with your **vTaskDelay()**. (Replace <<CLIENT_ID>> with your device client Id/serial number printed on the screen.)
+1. Open the AWS IoT Core console test page, subscribe to the topic `$aws/things/<<CLIENT_ID>>/shadow/update/accepted` and you should see new messages arriving in time with your **vTaskDelay()**. (Replace <<CLIENT_ID>> with your device client ID/serial number printed on the screen.)
 1. Open the AWS IoT Core console test page, publish a new shadow message on the topic `$aws/things/<<CLIENT_ID>>/shadow/update`. You should see the Core for AWS IoT EduKit's LED bars change from blue, to red, to off to represent the **COOLING**, **HEATING**, and **STANDBY** published values. See below for a sample shadow message. Test the effects by toggling the **hvacStatus** (set to **HEATING** or **COOLING**) and/or **roomOccupied** values (set to **true** or **false**) each time you publish the message.
 
 ```
