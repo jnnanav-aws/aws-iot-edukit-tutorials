@@ -46,7 +46,7 @@ PIO dependencies are installed in the background for the device platform. If tho
 {{% notice info %}}
 If you receive an error that the serial port timed out or there is an incorrect port number, open the `platformio.ini` file, and follow its instructions to manually set the upload port.
 {{% /notice %}}
-## Claim and provision the device
+## Claim and provision the device 
 Once the upload has successfully completed, the device will boot using the firmware that was just uploaded. It will also display the device's serial output in the terminal viewport. 
 
 The device will generate security keys and perform an [assisted claim](https://rainmaker.espressif.com/docs/claiming.html#assisted-claiming-esp32). Key generation can take up to a few minutes to complete. When the assisted claiming process, a quick response (QR) code displays on the terminal viewport.

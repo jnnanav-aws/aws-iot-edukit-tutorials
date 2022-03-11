@@ -32,7 +32,7 @@ pio run -e core2foraws-device_reg -t register_thing
 ## Conclusion
 In this section, you used the secure element and registration script to create an AWS IoT [thing](https://docs.aws.amazon.com/iot/latest/developerguide/thing-registry.html), create a permissions [policy](https://docs.aws.amazon.com/iot/latest/developerguide/thing-policy-variables.html) for your thing, attach the policy to the device certificate, and attach the device certificate to the thing. All of this was done without exposing the private key and your device was was protected against being compromised.
 
-Now that your AWS IoT EduKit has been registered in AWS IoT Core, continue to [**Connecting to AWS IoT Core**](connecting-to-aws.html).
+Now that your AWS IoT EduKit has been provisioned in AWS IoT Core, continue to [**Connecting to AWS IoT Core**](connecting-to-aws.html).
 
 ---
 {{% button href="https://github.com/aws-samples/aws-iot-edukit-tutorials/discussions" icon="far fa-question-circle" %}}Community support{{% /button %}} {{% button href="https://github.com/m5stack/Core2-for-AWS-IoT-EduKit/issues" icon="fas fa-bug" %}}Report bugs{{% /button %}}
