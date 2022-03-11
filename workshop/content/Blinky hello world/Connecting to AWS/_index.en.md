@@ -61,7 +61,7 @@ If during upload or while monitoring the serial output you receive an error abou
 ## Conclusion
 In this section, you successfully compiled the firmware updates, flashed your device, and monitored its serial outputs. Your AWS IoT EduKit then used the AWS IoT Device SDK for Embedded C to authenticate with the [MQTT message broker](https://docs.aws.amazon.com/iot/latest/developerguide/protocols.html) (AWS IoT Core. Your device is ready to receive messages.
 
-You are now ready to complete the final chapter in this tutorial, [**Blinking the LED**](/en/blinky-hello-world/blinking-the-leds.html).
+You are now ready to control the LEDs on the side of your device. Continue to [**Blinking the LED**](/en/blinky-hello-world/blinking-the-leds.html).
 
 ---
 {{% button href="https://github.com/aws-samples/aws-iot-edukit-tutorials/discussions" icon="far fa-question-circle" %}}Community support{{% /button %}} {{% button href="https://github.com/m5stack/Core2-for-AWS-IoT-EduKit/issues" icon="fas fa-bug" %}}Report bugs{{% /button %}}

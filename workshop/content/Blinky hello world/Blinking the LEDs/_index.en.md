@@ -27,28 +27,40 @@ The messages that your device sends to the cloud will begin to appear. (**Note:*
 Because of the policy constraints, the device can only publish messages to the topic beginning with its client ID. This provides flexibility so that another subscriber (such as, a cloud application) to filter topics for specific devices. Filters can also be applied to display more specific topics; such as, a specific device's temperature readings. 
 
 ## Blink the LED
-To start or stop the LED bars on the side of the AWS IoT EduKit from blinking, publish a message to the device from from the AWS IoT MQTT client in a topic that the device subscribes. The subscription topic for the device will have the pattern `<<CLIENT_ID>>/#`. You can view the subscription topic on the device after it successfully subscribes to the topic. Additionally, you can view the client ID that's been output on the host machine's serial monitor.
+To start or stop blinking the LED bars on the side of the AWS IoT EduKit, publish a message to the device from the AWS IoT MQTT client in a topic that the device subscribes. The subscription topic for the device will have the pattern `<<CLIENT_ID>>/#`. You can view the subscription topic on the device after it successfully subscribes to the topic. Additionally, you can view the client ID that's been output on the host machine's serial monitor.
 
-In the Publish box, enter the command below, after replacing the **<<CLIENT_ID>>** text with your actual client ID that you just copied. Then press the **Publish** button:
+Complete the following steps to begin blinking the LED bars on the device:
+1. Begin in the AWS IoT console's **MQTT test client window**. 
+1. Choose the **Publish to a topic** tab.
+1. Replace `<<CLIENT_ID>>' in the following code and enter the topic into the **PubTopic name** field:
 ```
 <<CLIENT_ID>>/blink
 ```
+4. Leave the default message in the **Message payload** field and press **Publish**. (**Note:** the message that you sent to this topic doesn't matter. The device will turn on or off the lights based on any published message to this topic)
+
 {{< img "aws_iot-mqtt_test_client-publish.en.png" "Subscribing to messages and publishing with AWS IoT console MQTT client" >}}
-Your device should now have the side bar LEDs blinking. To pause the blinking, simply press the **Publish** button again to publish to the same topic.
+
+
+Your device's LED bars should now blink. To pause the lights, press the **Publish** button again to publish another message to the same topic.
 
 {{% notice info %}}
-To exit the serial monitor, press **CTRL** + **C**.
+To exit the PIO serial monitor, return to VS Client and press **CTRL+C**.
 {{% /notice %}}
 
 ## Clean up
-To optimize resources used and avoid unwanted possible AWS Cloud service charges, erase the flash on your device to get it ready for the subsequent tutorials. To erase the flash, you'll need to be in a project that has already been built (such as the one you just completed), exit a running serial monitor that might block the port (press **CTRL** + **C**), and use the command:
+To avoid unwanted possible AWS Cloud service charges and optimize your resources, erase the flash memory on your AWS IoT EduKit. This will also prepare it subsequent tutorials. 
+
+Complete the following steps to erase the flash memory on your device: 
+1. Open **VS Client**, if necessary. 
+1. Open the PIO terminal.
+1. If a project is running, press **CTRL+C** to stop it. If there isn't a project running, continue to the next step.
+1. Issue the following command in the PIO terminal: 
 
 ```
 pio run --environment core2foraws --target erase
 ```
 
-
-On to the final chapter, the [**conclusion**](conclusion.html).
+Congratulations! You successfully communicated to your AWS IoT EduKit and blinked its LEDs.  Now you are ready to the complete the final section of this tutorial, [**conclusion**](conclusion.html).
 
 ---
 {{% button href="https://github.com/aws-samples/aws-iot-edukit-tutorials/discussions" icon="far fa-question-circle" %}}Community support{{% /button %}} {{% button href="https://github.com/m5stack/Core2-for-AWS-IoT-EduKit/issues" icon="fas fa-bug" %}}Report bugs{{% /button %}}
