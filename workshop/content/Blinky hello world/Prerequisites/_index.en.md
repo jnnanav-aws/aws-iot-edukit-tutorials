@@ -14,16 +14,16 @@ If you already have the AWS CLI (version 1 or version 2) installed and configure
 In the [Getting Started](../getting-started.html) tutorial, you installed and used Platform IO (PIO) and the PIO terminal window. The PIO terminal window pre-loads additional applications and libraries that your standard terminal/command prompt might not have. It is important to continue to use the PIO terminal window for all subsequent steps. 
 
 If you closed Visual Studio Code (VS Code) or don't have the terminal viewport with the PlatformIO CLI displayed, complete the following the steps:
-1. Open VS Code, if necessary.
+1. Open **VS Code**, if necessary.
 1. Choose the **PlatformIO logo** on the VS Code activity bar.
 1. From the **Quick Access** menu, expand **Miscellaneous**, and select **New Terminal**. The terminal viewport should load with a new terminal labeled *PlatformIO CLI*.
 {{< img "pio-new_terminal-alexa_intro.en.png" "PlatformIO CLI terminal in VS Code" "1 - Open PIO menu, 2 - Open a new PIO Terminal, 3 - Verify that you have a 'PlatformIO CLI' terminal session">}}
 
-## Download and nstall the AWS CLI
+## Download and Install the AWS CLI
 The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. You can control multiple AWS services from the command line and automate them through scripts with just one tool . To configure the AWS CLI, you first need to have an AWS account. Please [sign in to AWS console](https://console.aws.amazon.com/console/home) or [create an AWS account](https://portal.aws.amazon.com/billing/signup#/start) before proceeding.
 
 {{%expand "Ubuntu Linux v18.0+ (64-bit)" %}}
-Execute the following commands to download and install the latest AWS CLI version 2 for 64-bit Linux:
+Issue the following commands to download and install the latest AWS CLI version 2 for 64-bit Linux:
    ```bash
    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
    unzip awscliv2.zip
@@ -53,7 +53,7 @@ With the AWS CLI installed and the IAM user access credentials in hand, it's tim
 
 One of the settings you'll configure is the [AWS Region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html). It is important to keep in mind that the Region you're currently using stays consistent—for purposes of this tutorial, we use `us-west-2` as a standard Region. Using a different Region or unknowingly changing Regions can cause other challenges in subsequent steps; such as, [regional service availability](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/).
 
-Enter the following command in the terminal viewport to configure the AWS CLI on your host machine:
+Issue the following command in the terminal viewport to configure the AWS CLI on your host machine:
 ```bash
 aws configure
 ```
