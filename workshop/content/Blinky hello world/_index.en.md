@@ -12,10 +12,11 @@ Through this tutorial you connect your device to the [AWS IoT Core](https://aws.
 - Register a "[thing](https://docs.aws.amazon.com/iot/latest/developerguide/iot-thing-management.html)" in AWS IoT Core using the security certificates pre-provisioned on the onboard secure element.
 - Configure your AWS IoT EduKit to connect to your local Wi-Fi, connect to your AWS account's [AWS IoT endpoint](https://docs.aws.amazon.com/general/latest/gr/iot-core.html), and send MQTT messages to the AWS IoT Core.
 - Receive an MQTT message from the cloud on the specified reference hardware to trigger blinking an LED. 
-
+ 
 This tutorial requires that you have:
 - The [M5Stack Core2 for AWS IoT EduKit reference hardware](https://www.amazon.com/dp/B08VGRZYJR/) (AWS IoT EduKit).
 - An [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) that is *not* running production workloads.
+- A user in your AWS account that is assigned to you and has administrator access.
 - Completed the [Getting Started](getting-started/prerequisites.html) tutorial.
 - Are comfortable with basic technical concepts and tools; such as, the command prompt or terminal window.
 

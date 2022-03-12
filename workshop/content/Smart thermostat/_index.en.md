@@ -10,7 +10,7 @@ In this tutorial, you configure your AWS IoT EduKit to simulate a smart thermost
 This tutorial requires that you have:
 - The [M5Stack Core2 for AWS IoT EduKit reference hardware](https://www.amazon.com/dp/B08VGRZYJR/) (AWS IoT EduKit).
 - An [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) that is *not* running production workloads.
-- A user in your AWS account with administrator access.
+- A user in your AWS account that is assigned to you and has administrator access.
 - Completed the [Getting Started](getting-started/prerequisites.html) tutorial.
 - Are comfortable with basic technical concepts and tools; such as, the command prompt or terminal window.
 
