@@ -8,7 +8,7 @@ In this section, you provision your AWS IoT EduKit to connect to AWS IoT Core us
 
 ## Open the Blink Hello World project
 Complete the following steps to open the  Blinky-Hello-World project: 
-1. Open **VS Code**, if necessary
+1. Open **VS Code**, if necessary.
 1. Expand the **File menu** and select **New Window** in the VS Code to open a new window. This provides a clean file Explorer and working environment.
 1. Select the **PlatformIO logo** in the VS Code activity bar, choose **Open**, and then select **Open Project**.
 1. Navigate to the `Core2-for-AWS-IoT-EduKit/Blinky-Hello-World` folder and choose **open**.
