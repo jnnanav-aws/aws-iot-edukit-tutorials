@@ -7,7 +7,7 @@ pre = "<b>2. </b>"
 
 Welcome to Cloud Connected Blinky. In this tutorial, you create a "blinky" application, which is the equivalent of a [hello world](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) exercise for microcontrollers. The "blinky" exercise demonstrates that you have established communication (telemetry) between the device and the cloud. 
 
-Through these lessons you connect your device to the [AWS IoT Core](https://aws.amazon.com/iot-core/), send and receive [MQTT](https://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html) messages, and view the messages on the device and in the AWS cloud. In order to accomplish this, you will:
+Through this tutorial you connect your device to the [AWS IoT Core](https://aws.amazon.com/iot-core/), send and receive [MQTT](https://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html) messages, and view the messages on the device and in the AWS cloud. In order to accomplish this, you will:
 - Install and configure the [AWS CLI](https://aws.amazon.com/cli/) on your host machine to remotely manage your AWS services and use provided helper scripts.
 - Register a "[thing](https://docs.aws.amazon.com/iot/latest/developerguide/iot-thing-management.html)" in AWS IoT Core using the security certificates pre-provisioned on the onboard secure element.
 - Configure your AWS IoT EduKit to connect to your local Wi-Fi, connect to your AWS account's [AWS IoT endpoint](https://docs.aws.amazon.com/general/latest/gr/iot-core.html), and send MQTT messages to the AWS IoT Core.

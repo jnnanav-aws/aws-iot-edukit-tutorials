@@ -12,14 +12,14 @@ Assumptions. Before starting this lab, verify the following prerequisites:
 2. You have an AWS account that is not running any production workloads (i.e. an account safe for sandbox and evaluation purposes).
 1. You have a user login or role to the AWS account with administrator access.
 1. Your Core2 for AWS IoT EduKit has been provisioned in AWS IoT Core and is already communicating with AWS via MQTT. Start with the [**Smart Thermostat**](/en/smart-thermostat.html) tutorial if you have not already completed that baseline of functionality.
+### Learning Objectives
 
-Learning Objectives. By the end of this lab, you should know:
-1. How to forward device telemetry to AWS IoT Analytics for storage, transformation, and creating analytical data sets.
-1. How to use Amazon SageMaker Studio to create an experiment that automatically generates a machine learning model from your data sets.
-1. How to deploy a machine learning model to a consumable API endpoint.
-1. How a serverless function consumes an ML inference API to augment an application.
+By the end of this tutorial, you will:
+1. Forward device telemetry to AWS IoT Analytics for storage, transformation, and create an analytical data set.
+1. Use Amazon SageMaker Studio to create an experiment that automatically generates a machine learning model from your data set.
+1. Deploy a machine learning model to a consumable API endpoint.
 
-Let's begin with the [**Introduction**](/en/smart-spaces/introduction.html).
+To begin, continue to [**Introduction**](/en/smart-spaces/introduction.html).
 
 ---
 {{% button href="https://github.com/aws-samples/aws-iot-edukit-tutorials/discussions" icon="far fa-question-circle" %}}Community support{{% /button %}} {{% button href="https://github.com/m5stack/Core2-for-AWS-IoT-EduKit/issues" icon="fas fa-bug" %}}Report bugs{{% /button %}}
