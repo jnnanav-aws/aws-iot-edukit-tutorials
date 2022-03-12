@@ -18,7 +18,7 @@ Complete the following steps to subscribe to an MQTT message topic:
 
 {{< img "aws_iot-mqtt_test_client-subscribe.en.png" "Choose test in AWS IoT console" >}}
 
-4. Confirm that the *Subscribe to a topic*` tab is active in the MQTT test client window.
+4. Confirm that the *Subscribe to a topic* tab is active in the MQTT test client window.
 1. Enter **#** (hash symbol) in theIn the Topic filter field to subscribe to *all* MQTT topic names. (The hash symbol, *#*, is a multi-level wild card [topic filter](https://docs.aws.amazon.com/iot/latest/developerguide/topics.html#topicfilters) and can only be used once and as the last character of a topic filter.)
 1. Choose **Subscribe to topic**. 
 
