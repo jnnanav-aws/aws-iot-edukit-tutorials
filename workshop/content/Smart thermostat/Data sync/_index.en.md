@@ -191,7 +191,7 @@ Complete the following steps to validate that your device is configured as inten
   $aws/things/<<CLIENT_ID>>/shadow/update
 ```
 
-8. You should see the AWS IoT EduKit's LED bars change from blue to red and off to represent the `COOLING`, `HEATING`, and `STANDBY`states. The following displays a sample shadow message. 
+8. Before you choose publish, replace the information in the Message payload field with the following. Then, choose Publish. You should see the AWS IoT EduKit's LED bars change from blue to red and off to represent the `COOLING`, `HEATING`, and `STANDBY`states. The following displays a sample shadow message. 
 ```
 { "state": { "desired": { "hvacStatus": "HEATING", "roomOccupancy": true } } }
 ```
