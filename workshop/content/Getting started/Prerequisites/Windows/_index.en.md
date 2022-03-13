@@ -12,7 +12,7 @@ This section provides information to configure your Windows computer (host machi
 OpenSSL provides a toolkit for secure communication to the Git repository (for more information, see [OpenSSL](https://www.openssl.org/))
  
 Complete the following steps to install OpenSSL, Git, and Git's dependencies:
-1. Download and install [OpenSSL](https://www.openssl.org/source/).
+1. Download and install [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html).
 1. Download and install [Git for Windows](https://git-scm.com/download/win).
    * When you install Git for Windows, use the default options and be sure to choose **Use the OpenSSL library** in the *Choosing HTTPS transport backend installer* page.
 
@@ -28,13 +28,13 @@ To be able to mount the virtual serial port and communicate across it, you must 
    {{% notice note %}}
    You must extract the contents of the folder because the driver will not install if the executable runs within the archive. Also, it is not important where you save the extracted folder. 
    {{% /notice %}} 
-4) Run the **CP210xVCPInstaller_x64.exe** installer.
-5) Restart your host machine now to make sure the driver is applied.
+4) **Open the folder**, right-click the **silabser.inf** file, and choose **Install**.
+5) Restart your host machine to make sure the driver is applied.
 
 ## Install Visual Studio Code
 Visual Studio Code (VS Code) is an open source integrated development environment (IDE) that allows you to view, edit, and manage code. 
 
-Download and install the latest [VS Code](https://code.visualstudio.com/) software for your operating system. To troubleshoot issues with Visual Studio Code's installation or use, refer to [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) in their documentation.
+* Download and install the latest [VS Code](https://code.visualstudio.com/) software for your operating system. To troubleshoot issues with Visual Studio Code's installation or use, refer to [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) in their documentation.
 
 ## Install PlatformIO
 [PlatformIO](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) (PIO) provides a professional embedded development platform that simplifies embedded software development. This VS Code extension combines the functionality of the Platform IO command line interface (CLI) with a graphical user interface (GUI). 
@@ -47,8 +47,8 @@ Restart VS Code after the PIO installation completes.
 All of the projects exist in a [GitHub repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories). Through this repository you can clone the instructions, and view the revision history of each file in the repository.
 
 Complete the following steps to clone the code for the tutorials:
-1. Choose the **PlatformIO logo** on the VS Code activity bar.
-1. Open PlatformIO's **Quick Access** menu, expand **Miscellaneous**, and choose **Clone Git Project**.
+1. Choose the **PlatformIO logo** on the VS Code activity bar to open PlatformIO's Quick Access menu. 
+1. Expand **Miscellaneous** and choose **Clone Git Project**.
 1. Copy the following URL and paste it into the target field at the top of the page.
    ```
    bash https://github.com/m5stack/Core2-for-AWS-IoT-EduKit.git
@@ -63,7 +63,7 @@ Install the ESP Rainmaker application through:
 * Android: [Google PlayStore](https://play.google.com/store/apps/details?id=com.espressif.rainmaker), [Direct APK](https://github.com/espressif/esp-rainmaker-android/releases)
 * iOS: [Apple App Store](https://apps.apple.com/app/esp-rainmaker/id1497491540)
 
-If you don't have a compatible Android or iOS device, you follow the [ESP RainMaker CLI Setup](https://rainmaker.espressif.com/docs/cli-setup.html) instructions.
+If you don't have a compatible Android or iOS device, follow the [ESP RainMaker CLI Setup](https://rainmaker.espressif.com/docs/cli-setup.html) instructions.
 
 ## Identify the device communication port
 If you haven't already, unbox the AWS IoT EduKit and connect it to your host computer's USB 2.0 port using the supplied USB-A to USB-C cable. (You do not need to use the hex key that is included at this time. This key is used to install additional modules that are sold separately.) 
@@ -74,7 +74,7 @@ The device should automatically turn on when you plug it in. If it doesn't, pres
 Now that the device is ready and the prerequisite software is installed, let's identify the virtual port your device is using so that you can correctly route read and write operations.
 
 1) From PlatformIO's **Quick Access** menu, expand **PIO Home**, and select **Devices**.
-2) Choose the icon next to the port with the description **CP2104 USB to UART Bridge Controller** (this is usually `COM3`). Copy the device port number.
+2) Choose the icon next to the port with the description **Silicon Labs CP210x USB to UART Bridge** (this is usually `COM3`). **Write down the device port number.** (**Note:** When you disconnect and reconnect the AWS IoT EduKit to your host machine, the port number can change. Be sure to confirm this port each  time.)
 
 {{% notice note %}}
 If your AWS IoT EduKit does not appear in the device list, confirm that it's powered on and you are using the supplied USB-A to USB-C cable. Some USB-C hubs have compatibility issues with establishing a serial port.
