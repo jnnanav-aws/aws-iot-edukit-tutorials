@@ -7,13 +7,13 @@ pre = "<b>c. </b>"
 In this section, you publish the sampled ambient noise level and room temperature to AWS IoT Core every ten seconds, and your device's shadow in AWS IoT Core.
 
 ## Messaging
-In this section, you connect your device to your AWS IoT Core endpoint, then exchange messages between the device and cloud in a model called publish and subscribe, or "PubSub." AWS IoT Core is heavily based on a protocol called [Message Queueing Telemetry Transport](https://mqtt.org/) (MQTT). From the MQTT.org home page:
+To accomplish these goals, connect your device to your AWS IoT Core endpoint, and exchange messages between the device and the cloud in a model called publish and subscribe (PubSub). AWS IoT Core is heavily based on a protocol called [Message Queueing Telemetry Transport](https://mqtt.org/) (MQTT). From the MQTT.org home page:
 
 > MQTT is an OASIS standard messaging protocol for the Internet of Things (IoT). It is designed as an extremely lightweight publish/subscribe messaging transport that is ideal for connecting remote devices with a small code footprint and minimal network bandwidth. MQTT today is used in a wide variety of industries, such as automotive, manufacturing, telecommunications, oil and gas, etc. 
 
 The messages exchanged between your device and the cloud can include text, numbers, binary, or [JSON](https://www.json.org/json-en.html). JSON is a best practice for exchanging messages between decoupled systems and a recommended pattern for exploring AWS IoT services.
 
-Given security rights, messages publish to a topic and other clients on AWS IoT Core can subscribe and receive copies of published messages. Topics can look like the following examples:
+Given permissions, messages publish to a topic and other clients on AWS IoT Core can subscribe and receive copies of published messages. Topics can look like the following examples:
 
 * `this is a topic`
 * `domain/stuff/thing/whatever`
@@ -21,7 +21,7 @@ Given security rights, messages publish to a topic and other clients on AWS IoT 
 * `tokyo/weather/report`
 * `$aws/things/edukit/shadow/update`
 
-A topic can look like any text. The MQTT protocol defines topic partitions as separated by the forward slash '/' character. This is a foundational concept in designing topic architecture for an IoT solution. This module will help you implement topics to follow best practices. For more information, see [Designing MQTT Topics for AWS IoT Core](https://docs.aws.amazon.com/whitepapers/latest/designing-mqtt-topics-aws-iot-core/designing-mqtt-topics-aws-iot-core.html).
+The MQTT protocol defines topic partitions as separated by the forward slash '/' character. This is a foundational concept in designing topic architecture for an IoT solution. This module will help you implement topics to follow best practices. For more information, see [Designing MQTT Topics for AWS IoT Core](https://docs.aws.amazon.com/whitepapers/latest/designing-mqtt-topics-aws-iot-core/designing-mqtt-topics-aws-iot-core.html).
 
 In your smart thermostat solution, you use a feature of AWS IoT Core called device shadows. Simply put, a device shadow is a JSON document used to store and retrieve current state information for a device. You can store key-value pairs in a JSON document, publish the document on a special topic, and AWS IoT Core stores the document in the cloud. It's a useful way to keep the latest device state changes in the cloud so that other systems can receive updates in real time. It's also useful for other systems to send desired commands back to your device because AWS IoT Core keeps your device in sync with any new desired commands stored in the device shadow. 
 
