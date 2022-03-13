@@ -62,6 +62,13 @@ Complete the following steps to erase the flash memory on your device:
 ```
 pio run --environment core2foraws --target erase
 ```
+>  When the command in the  terminal window completes, the AWS IoT EduKit may not automatically restart or appear to be different. Power the device off and then on to confirm that the firmware was flashed.
+
+{{% notice note %}}
+Erasing the firmware results in a blank device screen and an audible ticking sound. This is expected behavior. The device is continually rebooting itself because it doesn't have an application to run.
+{{% /notice %}}
+
+
 
 Congratulations! You successfully communicated to your AWS IoT EduKit and blinked its LEDs.  Now you are ready to the complete the final section of this tutorial, [**conclusion**](conclusion.html).
 
