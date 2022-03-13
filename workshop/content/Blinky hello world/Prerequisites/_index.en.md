@@ -20,7 +20,10 @@ If you closed Visual Studio Code (VS Code) or don't have the terminal viewport w
 {{< img "pio-new_terminal-alexa_intro.en.png" "PlatformIO CLI terminal in VS Code" "1 - Open PIO menu, 2 - Open a new PIO Terminal, 3 - Verify that you have a 'PlatformIO CLI' terminal session">}}
 
 ## Download and Install the AWS CLI
-The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. You can control multiple AWS services from the command line and automate them through scripts with just one tool . To configure the AWS CLI, you first need to have an AWS account. Please [sign in to AWS console](https://console.aws.amazon.com/console/home) or [create an AWS account](https://portal.aws.amazon.com/billing/signup#/start) before proceeding.
+The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. You can control multiple AWS services from the command line and automate them through scripts with just one tool . To configure the AWS CLI, you first need to have an AWS account. 
+
+* If you do not have a personal AWS account, please [sign in to AWS console](https://console.aws.amazon.com/console/home) or [create an AWS account](https://portal.aws.amazon.com/billing/signup#/start) before proceeding.
+* Once complete, expand the appropriate operating system from the following list and complete the instructions to install the AWS CLI:
 
 {{%expand "Ubuntu Linux v18.0+ (64-bit)" %}}
 Issue the following commands to download and install the latest AWS CLI version 2 for 64-bit Linux:
@@ -38,13 +41,13 @@ Issue the following commands to download and install the latest AWS CLI version 
 
 {{%expand "Windows 10 (64-bit)" %}}
 1. Download the latest [AWS CLI version 2 installer for Windows](https://awscli.amazonaws.com/AWSCLIV2.msi).
-1. Launch the downloaded installer and follow the on-screen instructions to install the AWS CLI on the host machine.
+1. Launch the downloaded installer and follow the on-screen instructions to install the AWS CLI on your host machine.
 {{% /expand%}}
 
 For additional information and instructions, see [Installing or updating the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 ## Retrieve the IAM user access credentials
-[AWS AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) (IAM) is a web service that helps you securely control access to AWS resources. It is considered a best practice to [create an administrative user](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) instead of using your root user account.
+[AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) (IAM) is a web service that helps you securely control access to AWS resources. It is considered a best practice to [create an administrative user](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) instead of using your root user account.
 
 To retrieve your IAM user's access credentials, follow the instructions outlined in the [Quick configuration with aws configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config) documentation.
 
@@ -80,7 +83,7 @@ Next, verify that the AWS CLI is configured with your IAM credentials and is usi
 ```bash
 aws iot describe-endpoint --endpoint-type iot:Data-ATS
 ```
-It should return an address with the pattern `xxxxxxxx-ats.iot.us-west-2.amazonaws.com`. If you receive an error, see the troubleshooting guide noted above.
+It should return an address with the pattern `xxxxxxxx-ats.iot.us-west-2.amazonaws.com`. Take a moment to copy and paste the endpoint to a secure location. If you receive an error, see the troubleshooting guide noted above.
 
 Now that everything is installed and configured, continue to the next chapter, [**Device Provisioning**](device-provisioning.html).
 

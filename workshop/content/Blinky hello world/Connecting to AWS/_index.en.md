@@ -12,9 +12,9 @@ Establishing a secure MQTT connection is simplified with the [AWS IoT Device SDK
 Your source code configuration is handled through [Kconfig](https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html). The Linux kernel also uses Kconfig configuration system to simplify their configuration options ([symbols](https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html)) into a tree structure. 
 
 Complete the following steps to open the KConfig menu:
-1. Return to the VS Client with the PIL terminal window open. 
-1. Navigate to the Blinky-Hello-World directory In the PIO terminal window. 
-1. Issue the following command in the PIO terminal window to configure your device: 
+1. Return to **VS Client** and open a new **PIO terminal** window. 
+1. Navigate to the **Blinky-Hello-World** directory in the PIO terminal window. 
+1. Issue **the following command** in the PIO terminal window to configure your device: 
 ```bash
 pio run --environment core2foraws --target menuconfig
 ```
@@ -27,10 +27,10 @@ Navigation in the Espressif configuration window may vary based on your computer
 
 1. Navigate to **AWS IoT EduKit Configuration** and press **Enter** on your keyboard. 
 1. Select **WiFi SSID**. 
-1. Enter the **service set identifier (SSID) for your local Wi-Fi network** and press **Enter**.
+1. Remove the **default SSID** (AWSWorkshop) and enter the **service set identifier (SSID) for your local Wi-Fi network** and press **Enter**.
 1. Navigate to and select **WiFi Password**.
-1. Enter the **password for your local Wi-Fi network** and press **Enter**.
-1. Enter **s** to save these settings and press **Enter** to confirm the file location. 
+1. Remove the **default password** and enter the **password for your local Wi-Fi network** and press **Enter**.
+1. Enter **s** to save these settings, press **Enter** to confirm the file location, and press **Enter** again to close the message box.
 1. Enter **q** to quit configuration and return to the PIO terminal window.
 
 {{< img "idf_menuconfig-wifi.en.webp" "Configuring Core2 for AWS IoT EduKit with p.py menuconfig" >}}
@@ -61,7 +61,7 @@ If during upload or while monitoring the serial output you receive an error abou
 ## Conclusion
 In this section, you successfully compiled the firmware updates, flashed your device, and monitored its serial outputs. Your AWS IoT EduKit then used the AWS IoT Device SDK for Embedded C to authenticate with the [MQTT message broker](https://docs.aws.amazon.com/iot/latest/developerguide/protocols.html) (AWS IoT Core. Your device is ready to receive messages.
 
-You are now ready to control the LEDs on the side of your device. Continue to [**Blinking the LED**](/en/blinky-hello-world/blinking-the-leds.html).
+You are now ready to control the LEDs on the side of your device. Continue to [**Blinking the LEDs**](/en/blinky-hello-world/blinking-the-leds.html).
 
 ---
 {{% button href="https://github.com/aws-samples/aws-iot-edukit-tutorials/discussions" icon="far fa-question-circle" %}}Community support{{% /button %}} {{% button href="https://github.com/m5stack/Core2-for-AWS-IoT-EduKit/issues" icon="fas fa-bug" %}}Report bugs{{% /button %}}

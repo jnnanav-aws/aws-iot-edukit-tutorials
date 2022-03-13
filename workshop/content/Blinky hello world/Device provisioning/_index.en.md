@@ -11,7 +11,7 @@ Complete the following steps to open the  Blinky-Hello-World project:
 1. Open **VS Code**, if necessary.
 1. Expand the **File menu** and select **New Window** in the VS Code to open a new window. This provides a clean file Explorer and working environment.
 1. Select the **PlatformIO logo** in the VS Code activity bar, choose **Open**, and then select **Open Project**.
-1. Navigate to the `Core2-for-AWS-IoT-EduKit/Blinky-Hello-World` folder and choose **open**.
+1. Navigate to the `Core2-for-AWS-IoT-EduKit/Blinky-Hello-World` folder and choose **Open "Blinky-Hello-World**.
 {{< img "pio-home.en.png" "PlatformIO home screen" "1 - Open the PIO menu, 2 - Open the PIO home, 3 - Open the project folder" >}}
 
 ## Retrieve the device certificate and register your AWS IoT thing
@@ -22,7 +22,9 @@ The secure element on the Core2 for AWS IoT EduKit reference hardware allows you
 * The script uses the [Microchip TrustPlatform tools](https://github.com/MicrochipTech/cryptoauth_trustplatform_designsuite) to read the manifest file from disk, verify that the contents have not been altered (tampered), and registers the microchip (secure element) using a [just-in-time registration](https://aws.amazon.com/blogs/iot/just-in-time-registration-of-device-certificates-on-aws-iot/) process and the microchip manufacturer's Certificate Authoritiy (CA).
     * During the registration process, the AWS IoT creates a thing, creates a device certificate and attaches it to the thing, creates a secure policy and attaches it to the certificate, and adds the AWS IoT MQTT broker endpoint address to the device's firmware configuration. 
 
-Issue the following commands in the [PlatformIO CLI terminal window](prerequisites.html#open-the-platformio-cli-terminal-window) to run the registration helper script:
+Complete the following steps to register your AWS IoT EduKit with AWS IoT Core:
+1. Connect your AWS IoT EduKit to your host machine. Be sure that the device is powered on -- if you flashed the firmware from the Getting Started tutorial, your device will make a quiet clicking sound when it's powered on.
+1. Issue the following commands in the [PlatformIO CLI terminal window](prerequisites.html#open-the-platformio-cli-terminal-window) to run the registration helper script:
 
 ```bash
 cd Blinky-Hello-World
