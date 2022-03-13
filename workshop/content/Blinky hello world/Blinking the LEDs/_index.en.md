@@ -14,13 +14,13 @@ The AWS IoT MQTT client in the AWS IoT Core console allows you to both view and 
 Complete the following steps to subscribe to an MQTT message topic:
 1. Log into your AWS Account. 
 1. Navigate to the [AWS IoT console](https://us-west-2.console.aws.amazon.com/iot/home?region=us-west-2#/) 
-1. Choose **Test** in the navigation pane to open the client view.
+1. Expand **Test** in the navigation pane and choose **MQTT test client** to open the client view.
 
 {{< img "aws_iot-mqtt_test_client-subscribe.en.png" "Choose test in AWS IoT console" >}}
 
 4. Confirm that the *Subscribe to a topic* tab is active in the MQTT test client window.
 1. Enter **#** (hash symbol) in theIn the Topic filter field to subscribe to *all* MQTT topic names. (The hash symbol, *#*, is a multi-level wild card [topic filter](https://docs.aws.amazon.com/iot/latest/developerguide/topics.html#topicfilters) and can only be used once and as the last character of a topic filter.)
-1. Choose **Subscribe to topic**. 
+1. Choose **Subscribe**. 
 
 The messages that your device sends to the cloud will begin to appear. (**Note:** this can take a minute or two before they appear) 
 
@@ -30,9 +30,12 @@ Because of the policy constraints, the device can only publish messages to the t
 To start or stop blinking the LED bars on the side of the AWS IoT EduKit, publish a message to the device from the AWS IoT MQTT client in a topic that the device subscribes. The subscription topic for the device will have the pattern `<<CLIENT_ID>>/#`. You can view the subscription topic on the device after it successfully subscribes to the topic. Additionally, you can view the client ID that's been output on the host machine's serial monitor.
 
 Complete the following steps to begin blinking the LED bars on the device:
-1. Begin in the AWS IoT console's **MQTT test client window**. 
+1. Begin in the AWS IoT console.
+1. Expand **Manage** in the navigation pane, and choose **Things**.
+1. The Things page displays all the devices that are registered in your AWS account for this Region. You should have one listed with a *microchip-tng* Thing type--this is your AWS IoT EduKit device. Write down this **device's name** because it is your AWS IoT device ID. 
+1. Expand **Test** in the navigation pane, and choose **MQTT test client window**. 
 1. Choose the **Publish to a topic** tab.
-1. Replace `<<CLIENT_ID>>' in the following code and enter the topic into the **PubTopic name** field:
+1. Replace **<<CLIENT_ID>>** in the following code and enter the topic into the **PubTopic name** field:
 ```
 <<CLIENT_ID>>/blink
 ```
