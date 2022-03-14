@@ -14,9 +14,9 @@ Now, you'll go into the KConfig menu to configure the required [symbols](https:/
 pio run --environment core2foraws --target menuconfig
 ```
 
-{{< img "idf_menuconfig-wifi.en.webp" "Configuring Core2 for AWS IoT EduKit with p.py menuconfig" >}}
+{{< img "idf_menuconfig-wifi.en.webp" "Configuring Core2 for {{<awsEdukitShort-en>}} with p.py menuconfig" >}}
 
-Use the direction keys (or *K* and *J*, or *-* and *+*) on your keyboard to go to **AWS IoT EduKit Configuration** from the menu. Set your **WiFi SSID** and **WiFi Password** with your Wi-FI credentials. Once you are finished, press the *s* button on your keyboard to save, confirm the location of the file by pressing *enter*, followed by *q* to quit.
+Use the direction keys (or *K* and *J*, or *-* and *+*) on your keyboard to go to **{{<awsEdukitShort-en>}} Configuration** from the menu. Set your **WiFi SSID** and **WiFi Password** with your Wi-FI credentials. Once you are finished, press the *s* button on your keyboard to save, confirm the location of the file by pressing *enter*, followed by *q* to quit.
 
 {{% notice warning %}}
 Be sure your SSID is for a 2.4GHz network. The ESP32-D0WD on the M5Stack Core2 for AWS hardware does not support 5GHz Wi-Fi bands.

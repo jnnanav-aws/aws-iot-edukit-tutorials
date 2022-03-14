@@ -5,7 +5,7 @@ pre = "<b>a. </b>"
 +++
 
 ## Your task
-In this scenario, you take on the role of a full-stack developer tasked with automating thermostat functions of a meeting room to conserve energy. You will use the Core2 for AWS IoT EduKit reference hardware for the thermostat hardware and deploy an end-to-end solution combining the reference hardware kit as an HVAC controller with the power of the AWS cloud. We create a fictional HVAC system in which your Core2 for AWS IoT EduKit acts as a thermostat.
+In this scenario, you take on the role of a full-stack developer tasked with automating thermostat functions of a meeting room to conserve energy. You will use the Core2 for {{<awsEdukitShort-en>}} reference hardware for the thermostat hardware and deploy an end-to-end solution combining the reference hardware kit as an HVAC controller with the power of the AWS cloud. We create a fictional HVAC system in which your Core2 for {{<awsEdukitShort-en>}} acts as a thermostat.
 
 The thermostat should use a narrower range of temperatures when employees occupy the room to maximize their comfort. When the room is not occupied, a wider range of temperatures is permitted to save energy. The solution should recognize when employees are present in the room and engage the HVAC to deliver comfortable temperatures.
 
@@ -23,9 +23,9 @@ While the room is occupied and the measured temperature is out of comfort bounds
 Are you ready to start building? Let's make sure you have the following prerequisites sorted:
 
 1. Have you completed the **Blinky Hello World** tutorial? 
-2. Is your Core2 for AWS IoT EduKit already provisioned in AWS IoT Core? This means you have registered it as an AWS IoT thing with a certificate and policy attached that enables publish and subscribe operations? These steps are in the **Blinky Hello World** tutorial.
+2. Is your Core2 for {{<awsEdukitShort-en>}} already provisioned in AWS IoT Core? This means you have registered it as an AWS IoT thing with a certificate and policy attached that enables publish and subscribe operations? These steps are in the **Blinky Hello World** tutorial.
 3. Have you confirmed that you can see messages arrive from your device using a test MQTT client like the one in the AWS IoT Core console? You should be able to subscribe to a topic that your device is publishing on and see those messages arrive in the test client.
-4. Do you know which serial port your Core2 for AWS IoT EduKit device is mounted to? This is also covered in the **Blinky Hello World** tutorial.
+4. Do you know which serial port your Core2 for {{<awsEdukitShort-en>}} device is mounted to? This is also covered in the **Blinky Hello World** tutorial.
 
 If so, let's begin by moving on to the next chapter, [**Data acquisition**](/en/smart-thermostat/data-acquisition.html).
 

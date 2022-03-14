@@ -7,7 +7,7 @@ pre = "<b>e. </b>"
 ## Chapter introduction
 By the end of this chapter, your solution will do the following:
 
-* Process telemetry messages from the Core2 for AWS IoT EduKit device in a managed cloud application.
+* Process telemetry messages from the Core2 for {{<awsEdukitShort-en>}} device in a managed cloud application.
 * Determine which state the HVAC system should be in: HEATING, COOLING, or STANDBY.
 * Send a desired state message to your device shadow based on processed inputs.
 * Sync the desired shadow state to your device.

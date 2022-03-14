@@ -5,7 +5,7 @@ pre = "<b>c. </b>"
 +++
 
 ## Chapter introduction
-By the end of this chapter, your Core2 for AWS IoT EduKit reference hardware kit should do the following:
+By the end of this chapter, your Core2 for {{<awsEdukitShort-en>}} reference hardware kit should do the following:
 
 * Publish the sampled ambient noise level and room temperature to AWS IoT Core every 10 seconds
 * Subscribe to your device's shadow in AWS IoT Core to receive new commands
@@ -176,7 +176,7 @@ pio run --environment core2foraws --target monitor
 Before moving on to the next chapter, you can validate that your device is configured as intended:
 
 1. Open the AWS IoT Core console test page, subscribe to the topic `$aws/things/<<CLIENT_ID>>/shadow/update/accepted` and you should see new messages arriving in time with your **vTaskDelay()**. (Replace <<CLIENT_ID>> with your device client Id/serial number printed on the screen.)
-2. Open the AWS IoT Core console test page, publish a new shadow message on the topic `$aws/things/<<CLIENT_ID>>/shadow/update`. You should see the Core for AWS IoT EduKit's LED bars change from blue, to red, to off to represent the **COOLING**, **HEATING**, and **STANDBY** published values. See below for a sample shadow message. Test the effects by toggling the **hvacStatus** (set to **HEATING** or **COOLING**) and/or **roomOccupied** values (set to **true** or **false**) each time you publish the message.
+2. Open the AWS IoT Core console test page, publish a new shadow message on the topic `$aws/things/<<CLIENT_ID>>/shadow/update`. You should see the Core for {{<awsEdukitShort-en>}}'s LED bars change from blue, to red, to off to represent the **COOLING**, **HEATING**, and **STANDBY** published values. See below for a sample shadow message. Test the effects by toggling the **hvacStatus** (set to **HEATING** or **COOLING**) and/or **roomOccupied** values (set to **true** or **false**) each time you publish the message.
 
 ```
 { "state": { "desired": { "hvacStatus": "HEATING", "roomOccupancy": true } } }
