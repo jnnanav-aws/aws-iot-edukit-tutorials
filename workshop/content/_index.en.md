@@ -9,8 +9,7 @@ Congratulations to the winners of the [Hackster.io Reinventing Healthy Spaces](h
 {{% /notice %}}
 
 ![EduKit Logo](AWS_IoT_EduKIt_Logo-320px_193px.png)
-{{<awsEdukitShort-en>}} is an easy way to learn how to build IoT applications using AWS services through a prescriptive learning program. {{<awsEdukitShort-en>}} helps developers – from students to experienced
-engineers and professionals – receive hands-on experience building end-to-end IoT applications by combining a reference hardware kit with a set of easy to follow guides and example code.
+{{<awsEdukitLong-en>}} is an easy way to learn how to build IoT applications using AWS services through a prescriptive learning program. {{<awsEdukitShort-en>}} helps developers – from students to experienced engineers and professionals – receive hands-on experience building end-to-end IoT applications by combining a reference hardware kit with a set of easy to follow guides and example code.
 
 ### Benefits of {{<awsEdukitShort-en>}}
 #### Simplified hardware selection

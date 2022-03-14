@@ -11,7 +11,7 @@ Assumptions. Before starting this tutorial, verify the following prerequisites:
 1. You have an [M5Stack Core2 ESP32 IoT Development Kit for {{<awsEdukitShort-en>}}](https://www.amazon.com/dp/B08VGRZYJR/).
 2. You have an AWS account that is not running any production workloads (i.e. an account safe for sandbox and evaluation purposes).
 3. You have a user login or role to the AWS account with administrator access.
-4. Your Core2 for {{<awsEdukitShort-en>}} has been provisioned in AWS IoT Core and is already communicating with AWS via MQTT. Start with the [**Blinky Hello World**](/en/blinky-hello-world.html) tutorial if you have not completed provisioning and established connectivity.
+4. Your Core2 for {{<awsEdukitLong-en>}} has been provisioned in AWS IoT Core and is already communicating with AWS via MQTT. Start with the [**Blinky Hello World**](/en/blinky-hello-world.html) tutorial if you have not completed provisioning and established connectivity.
 5. You have at least a basic technical understanding of AWS IoT messaging concepts such as topics, publishing, and subscribing.
 
 Learning Objectives. By the end of this lab, you should know:
