@@ -5,9 +5,27 @@ weight = 90
 pre = "<b>10. </b>"
 +++
 
-Welcome to the first AWS IoT EduKit tutorial. To complete this exercise, you will need the [M5Stack Core2 ESP32 IoT Development Kit for AWS](https://www.amazon.com/dp/B08VGRZYJR/) reference hardware. This getting started tutorial will walk you through a smart home solution to control some of the onboard peripherals via the iOS or Android RainMaker Phone Application or through the RainMaker CLI. This walkthrough does not require an AWS account and is meant to provide a quick demonstration of an embedded application that is enriched by connectivity to AWS IoT.
+>  Set up devices , accounts, and drivers 
 
-The solution you will walkthrough uses the Espressif RainMaker platform, which is powered by AWS, to provide a customizable smart home application without managing the infrastructure. There is no additional cost to using Espressif's RainMaker Platform.
+
+> * Open the box
+> * Connect provided USB cable to device and host computer
+> * Go to website (e.g., awsiotedukit.com (http://awsiotedukit.com/))
+> * Accept popup to enable USB comms w/ browser
+> * Select Wi-Fi SSID from list, enter Wi-Fi credentials (WPA2 Enterprise requires additional fields)
+> * Click/go to “monitoring” dashboard to view incoming telemetry
+> * Disconnect the USB cable to prove it’s being sent to the cloud
+> * Reconnect to change AWS IoT endpoint
+
+
+
+
+
+
+
+
+
+
 
 To get started with this tutorial, continue on to [**Prerequisites**](/en/getting-started-web/prerequisites.html).
 
