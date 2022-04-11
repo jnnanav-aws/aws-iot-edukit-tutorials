@@ -1,4 +1,5 @@
 +++
+linkTitle = "Authorization grants"
 title = "Authorization grants"
 weight = 20
 pre = "› "

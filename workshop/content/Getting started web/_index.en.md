@@ -1,5 +1,6 @@
 +++
-title = "Getting Started with the web-based development environment"
+linkTitle = "Getting started - web" 
+title = "Getting started with the web-based development environment"
 chapter = true
 weight = 90
 pre = "<b>10. </b>"

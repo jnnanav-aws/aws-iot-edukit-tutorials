@@ -1,4 +1,5 @@
 +++
+linkTitle = "Intro to device development"
 title = "Introduction to device development"
 weight = 10
 pre = "<b>a. </b>"

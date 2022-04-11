@@ -1,4 +1,5 @@
 +++
+linkTitle = "Intro to Device Development" 
 title = "Introduction to Device Development"
 chapter = true
 weight = 91

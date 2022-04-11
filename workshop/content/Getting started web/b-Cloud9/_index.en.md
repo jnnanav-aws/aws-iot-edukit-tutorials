@@ -1,4 +1,5 @@
 +++
+linkTitle = "Setting up AWS Cloud9"
 title = "Setup your AWS Cloud9 environment"
 weight = 20
 pre = "<b>b. </b>"

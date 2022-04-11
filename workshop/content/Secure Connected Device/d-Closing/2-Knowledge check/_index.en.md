@@ -1,7 +1,7 @@
 +++
 title = "Knowledge check"
 chapter = true
-weight = 10200
+weight = 20
 pre = "› "
 +++
 
