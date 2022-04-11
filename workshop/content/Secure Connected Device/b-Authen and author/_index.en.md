@@ -1,5 +1,5 @@
 +++
-linkTitle=Authentication and authorization"
+linkTitle="Authentication and authorization"
 title = "Introduction to authentication and authorization"
 weight = 20
 pre = "b. "

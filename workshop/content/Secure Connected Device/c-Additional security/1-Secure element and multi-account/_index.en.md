@@ -1,4 +1,5 @@
 +++
+linkTitle = "Secure element"
 title = "Secure element and multi-account registration"
 weight = 10
 pre = "› "
