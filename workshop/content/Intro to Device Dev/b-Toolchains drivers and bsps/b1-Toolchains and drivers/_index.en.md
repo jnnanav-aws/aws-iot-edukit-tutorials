@@ -5,65 +5,36 @@ weight = 10
 pre = "› "
 +++
 
-> Overview of toolchains and drivers
->    (short paragraphs: what is their function, why are they important)
->   * build systems (CMake)
->    * compilers (GCC)
->    * board support packages (BSP, aka hardware drivers)
->    * software libraries (IoT C-SDK) to create MCU applications
->    * How to research and find more information?
->    * VIDEO / ILLUSTRATION: demonstrating the parts working together
->    * (possible) CHECK IN: summarize key points in a quick review
-
-___ 
-
-
 The {{< awsService type="edukit-long-en" >}} development kit consists of a development board, microcontroller (MCU), memory, input and output pins, and an interface for communication. In order to program, or provide instructions, to the {{< awsService type="edukit-short-en" >}} you must supply firmware. A toolchain consists of programming tools that help you develop and communicate firmware to your board. 
 
 Toolchains can contain different tools, but commonly consist of a build system, cross compiler, board support packages (BSP), and software libraries. 
 #### Build system ###
 
-(CMake)
-
-
-
-For more information, see [About CMake](https://cmake.org/overview/).
-
-
+A build system synchronizes the toolchain components, manages the build process, and helps to create the standard build files. We use [CMake]{https://cmake.org/} as our build system. For more information, see [About CMake](https://cmake.org/overview/).
 
 #### Cross compiler ###
 
-(GCC)
-A cross compiler translates the written code into executable code for the development board's processor. In our case, we're creating C programs and using the GNU Compiler Collection (GCC) 
-
-
-For more information, see [GCC, the GNU Compiler Collection](https://gcc.gnu.org/) through GNU.org and [GNU Compiler Collection](https://en.wikipedia.org/wiki/GNU_Compiler_Collection) on Wikipedia. 
+A compiler converts a program you supply into executable code that the platform can run. A cross compiler performs the same task and can compile code across multiple platforms. We use the GNU Compiler Collection (GCC ) as our cross compiler. For more information, see [GCC, the GNU Compiler Collection](https://gcc.gnu.org/) through GNU.org and [GNU Compiler Collection](https://en.wikipedia.org/wiki/GNU_Compiler_Collection) on Wikipedia. 
 
 #### Board support packages ###
 
+A board support package (BSP) is a collection of hardware-specific drivers and routines that allow a Real Time Operating System to function on a specific platform. For more information, see [Core2 for AWS IoT EduKit BSP](https://edukit.workshop.aws/en/api-reference/index.html).
 
-(BSP, or hardware drivers)
+#### Software libraries and software development kits ###
 
-
-For more information, see [Core2 for AWS IoT EduKit BSP](https://edukit.workshop.aws/en/api-reference/index.html).
-
-
-#### Software libraries ###
-
-
-(IoT C-SDK) to create MCU applications
+Software libraries are a collection of prewritten tools, templates, and code that provide functionality. They can also provide base code that can be customized to meet a specific need. Similarly, a software development kit (SDK) provides a software libraries that help to build platform-specific code or applications. Because much of the code that you flash to your {{< awsService type="edukit-short-en" >}} is in the C programming language, we utilize the AWS IoT C-SDK. For more information, see the [AWS IoT Device SDK for Embedded C](https://docs.aws.amazon.com/freertos/latest/userguide/c-sdk.html).
 
 
 
+> << author note >>
+> INSERT AN ILLUSTRATION THAT SHOWS HOW THESE COMPONENTS WORK TOGETHER
+> 
 
 
 
-
-
-
-
-
-
+> << author note >>
+> POSSIBLE CHECK
+> 
 
 
 

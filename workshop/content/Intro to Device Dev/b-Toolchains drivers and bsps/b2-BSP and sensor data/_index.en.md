@@ -5,6 +5,9 @@ weight = 20
 pre = "› "
 +++
 
+>
+> SPEND SOME TIME with the introduction to bsps and libraries 
+>
 > Brief introduction to BSP and reading device sensor data.
 >     * Introduction to BSPs and libraries
 >         * What is a BSP and why do i care?

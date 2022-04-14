@@ -5,6 +5,11 @@ weight = 20
 pre = "› "
 +++
 
+
+> 
+> SPEND SOME TIME with the overview of rtos tasks
+> 
+
 >  Overview of RTOS tasks
 >     * Task states
 >     * task controls
