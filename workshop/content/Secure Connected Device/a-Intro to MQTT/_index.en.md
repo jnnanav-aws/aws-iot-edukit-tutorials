@@ -1,8 +1,8 @@
 +++
 linkTitle="Controlling peripherals"
 title = "Controlling peripherals through MQTT"
-weight = 30
-pre = "› "
+weight = 10
+pre = "a. "
 +++
 
 
