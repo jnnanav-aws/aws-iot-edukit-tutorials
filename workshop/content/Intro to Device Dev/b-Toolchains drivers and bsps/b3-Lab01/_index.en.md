@@ -1,5 +1,5 @@
 +++
-title = "Prepare the environment"
+title = "Lab: Prepare the environment"
 weight = 30
 pre = "› "
 +++

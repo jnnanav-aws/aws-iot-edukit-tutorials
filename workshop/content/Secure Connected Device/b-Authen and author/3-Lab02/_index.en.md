@@ -1,5 +1,5 @@
 +++
-linkTitle="Communicating through MQTT"
+linkTitle="Lab: Communicating through MQTT"
 title = "Communicate to AWS Core through MQTT"
 weight = 30
 pre = "› "

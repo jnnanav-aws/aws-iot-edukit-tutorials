@@ -1,6 +1,6 @@
 +++
 linkTitle = "MQTT protocol" 
-title = "MQTT protocol"
+title = "Overview of the MQTT protocol"
 weight = 20
 pre = "› "
 +++

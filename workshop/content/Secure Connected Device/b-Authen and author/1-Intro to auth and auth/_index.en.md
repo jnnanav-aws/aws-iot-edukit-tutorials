@@ -5,10 +5,25 @@ weight = 10
 pre = "› "
 +++
 
->  Introduction to authentication and authorization
->     * TLS introduction 
->     * .509 certificates and certificate chains
->     * Overview of the TLS Handshake process how authentication and authorization works with an x.509 certificate
+
+
+### Introduction to transport layer security ###
+
+Transport layer security (TLS) is a cryptographic protocol that is designed to provide communications security over a computer network. TLS ensures the confidentiality of application protocols. 
+
+
+### x.509 certificates ###
+
+
+
+
+#### certificate chains ####
+
+
+### TLS Handshake ###
+
+
+
 
 
 

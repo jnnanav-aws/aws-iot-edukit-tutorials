@@ -1,5 +1,5 @@
 +++
-linkTitle="Control peripherals"
+linkTitle="Lab: Controlling peripherals"
 title = "Controlling peripherals through MQTT"
 weight = 30
 pre = "› "

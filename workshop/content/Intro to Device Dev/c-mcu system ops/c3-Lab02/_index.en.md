@@ -1,5 +1,5 @@
 +++
-linkTitle="Control the device"
+linkTitle="Lab: Controlling the device"
 title = "Control the device's behaviors"
 weight = 30
 pre = "› "
