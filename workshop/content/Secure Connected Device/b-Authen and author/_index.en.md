@@ -5,10 +5,11 @@ weight = 20
 pre = "b. "
 +++
 
-
+> <<author note: >>
 > overview of lesson
 >  what we will do / accomplish
 > why it's important
+>  
 
 Let's begin by defining the commonly misunderstood terms: authentication and authorization. *Authentication* is a mutual process where the server identifies the device and the device identifies the server; potentially, providing the required credentials to allow access. *Authorization* provides permissions about what functions that device can perform or access while they have access. 
 

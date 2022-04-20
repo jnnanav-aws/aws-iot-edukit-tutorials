@@ -1,6 +1,6 @@
 +++
-linkTitle="Introduction"
-title = "Introduction to authentication and authorization"
+linkTitle="Intro to authentication"
+title = "Introduction to authentication"
 weight = 10
 pre = "› "
 +++
@@ -47,7 +47,7 @@ During authentication, when both the client and server are being authenticated, 
 
 When planning an IoT solution, it is important to incorporate the following certificate best practices: 
 
-- Always give each device a unique certificate. This allows for fine-grained management of your devices. If an malicious user gains access to a single device, you want to be able to revoke the certificate for that particular unique device.
+- Always give each device a unique certificate. This allows for fine-grained management of your devices. If an malicious actor gains access to a single device, you want to be able to revoke the certificate for that particular unique device.
 - Giving each device its own certificate also enables you to run checks to see if a certificate is shared by multiple devices. When multiple devices use the same certificate, this might indicate that a device has been compromised. Its identity then might have been cloned to further compromise the system.
 - Devices must support rotation and replacement of certificates. This ensures smooth operation as certificates expire. 
 
