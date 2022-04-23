@@ -9,7 +9,7 @@ pre = "› "
 > Deep dive on secure element and Multi-Account Registration flow.
 
 
-
+The {{< awsService type="edukit-short-en" >}} ATECC608 Trust&GO secure element and it provides a hardware root of trust. For more information, see the {{< awsService type="docs-bsp-en" >}} guide: [ATECC608](https://edukit.workshop.aws/en/api-reference/atecc608.html).
 
 
 ---
