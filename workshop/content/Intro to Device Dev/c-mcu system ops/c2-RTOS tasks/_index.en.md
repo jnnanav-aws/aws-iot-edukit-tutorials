@@ -4,15 +4,29 @@ title = "Introduction to RTOS tasks"
 weight = 20
 pre = "› "
 +++
+> {{< otherService type="freertos-short-en" >}}
 
 
-> 
-> SPEND SOME TIME with the overview of rtos tasks
-> 
+## Overview
 
->  Overview of RTOS tasks
->     * Task states
->     * task controls
+
+
+
+
+### Task states
+
+
+
+
+### Task controls
+
+
+
+
+
+
+### Inter-task communication and task synchronization
+
 
 
 >  RTOS inter-task communication and task synchronization 
@@ -21,6 +35,23 @@ pre = "› "
 >     * Mutexes / Semaphores
 >     * Event Groups
 >     * (possible) CHECK IN: summarize key points in a quick review
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
