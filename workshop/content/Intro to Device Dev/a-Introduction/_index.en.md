@@ -1,6 +1,6 @@
 +++
-linkTitle = "Intro to device development"
-title = "Introduction to device development"
+linkTitle = "Introduction"
+title = "Introduction"
 weight = 10
 pre = "<b>a. </b>"
 +++

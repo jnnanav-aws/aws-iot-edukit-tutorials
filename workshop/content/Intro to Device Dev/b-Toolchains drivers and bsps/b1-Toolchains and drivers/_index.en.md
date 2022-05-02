@@ -5,6 +5,20 @@ weight = 10
 pre = "› "
 +++
 
+
+> <<author note:>>
+
+> IF WE'RE MOVING TO A WEB-BASED DEVELOPMENT ENVIRONMENT, WHY ARE WE TALKING ABOUT TOOLCHAINS AND THE ASSOCIATED SUPPORT PROGRAMS? I RECOGNIZE THA THEY ARE IMPORTANT AND ARE USED WITHIN OTHER / STANDARD DEVELOPMENT, BUT THIS WOULD MAKE MORE SENSE IF THE STUDENT WAS INSTALLING THESE APPLICATIONS.
+
+
+> <<author note>>
+
+
+
+
+
+
+
 The {{< awsService type="edukit-long-en" >}} development kit consists of a development board, microcontroller (MCU), memory, input and output pins, and an interface for communication. In order to program, or provide instructions, to the {{< awsService type="edukit-short-en" >}} you must supply firmware. A toolchain consists of programming tools that help you develop and communicate firmware to your board. 
 
 Toolchains can contain different tools, but commonly consist of a build system, cross compiler, board support packages (BSP), and software libraries. 
