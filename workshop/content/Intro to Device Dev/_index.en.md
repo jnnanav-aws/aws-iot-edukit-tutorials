@@ -7,9 +7,6 @@ pre = "<b>11. </b>"
 +++
 
 
-
-____
-
 This tutorial presents foundational concepts for developing applications with the {{< awsService type="edukit-short-en" >}}. Although the specifics might change when you use other devices, the concepts are transferrable.
 
 IoT has broad application. It can take many forms, and assist people and projects in unlimited ways. Because of this, exactly what IoT is and what it can accomplish can be confusing. During this tutorial, we present an introduction to the Internet of Things (IoT) and discuss why it's important and what you can do with it.
