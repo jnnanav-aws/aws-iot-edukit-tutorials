@@ -1,5 +1,5 @@
 +++
-title = "Conclusion"
+title = "Summary"
 weight = 40
 pre = "<b>d. </b>"
 +++

@@ -29,7 +29,7 @@ An RTOS task can exist in one of four states:
 - *Suspended*: Suspending a task is similar to blocking a task except that it doesn't have a timeout period. Tasks transition to and from the Suspended state through explicit API calls. 
   - Tasks that are Suspended cannot not transition directly to a Running state - they must become Ready first.
 
-
+ 
 
 
 

@@ -5,7 +5,7 @@ pre = "› "
 +++
 
 
-> course summary
+> TO BE DELETED - DOESN'T MAKE SENSE TO HAVE AN INTRO TO THE CONCLUSION AND A SUMMARY
 
 
 
