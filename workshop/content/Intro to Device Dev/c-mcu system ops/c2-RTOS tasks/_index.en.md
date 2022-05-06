@@ -46,6 +46,17 @@ An RTOS task can exist in one of four states:
 ## Task controls
 
 
+> FROM RASHED: 
+> For task control, we should cover the following:
+> •	xTaskCreatePinnedToCore this is a modified version of the vanilla FreeRTOS xTaskCreate which accepts an additional argument since the ESP32 is dual core.
+> •	vTaskSuspend
+> •	vTaskDelay
+> •	vTaskResume
+> •	vTaskDelete
+
+> For task communications the two below is sufficient for someone starting off, a nice to have is xTaskNotify if we can squeeze that in since that’s a newer more performant way of communicating simple things among tasks:
+> •	Queues
+> •	Semaphores/Mutexes
 
 
 
