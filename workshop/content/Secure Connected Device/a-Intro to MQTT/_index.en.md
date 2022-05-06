@@ -6,9 +6,28 @@ pre = "a. "
 +++
 
 
+
+> Overview of MQTT communication and security concerns within IoT devices
+
+> how is mqtt used to receive information and control devices?
+> what is a device shadow? 
+
+> [MQTT](https://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html) 
+
+
+
+
+
+
 > overview of lesson
 >  what we will do / accomplish
 > why it's important
+
+
+
+
+
+
 
 
 ---
