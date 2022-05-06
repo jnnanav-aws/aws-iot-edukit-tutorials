@@ -11,7 +11,7 @@ Smart devices are common in home automation. You can control your television thr
 IoT devices provide a way to monitor, control, and/or collect information about your physical world. Depending on the capabilities of the device and it's programming, an IoT device can collect information, and act locally and independently. It could send the data to the cloud for further processing, or to notify someone about an event. If Internet connections are unreliable, an IoT device can collect information and send updates to the cloud when connection is restored, or wait for an upload request. What IoT can do for us and ways that we interact with IoT Devices is endless and constantly evolving.
 
 The following outlines some common examples of IoT devices within home automation:
-- Smart assistants can provide answers, activate smart appliances and devices, and place online orders.- 
+- Smart assistants can provide answers, activate smart appliances and devices, and place online orders.
 - Smart lightbulbs can turn on and off based on a schedule, smartphone application, and your proximity to the house (based on a smartphone's location).
 - Connected home security can turn on and off through a smartphone application. 
 - Connected appliances (coffee maker, refrigerator, tv, and toilets) can turn on and off remotely or be set on a schedule. You can also track utility consumption and get monthly reports so that you can adjust for efficiency. 
