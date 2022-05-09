@@ -28,7 +28,7 @@ An RTOS task can exist in one of four states:
 - *Suspended*: Suspending a task is similar to blocking a task except that it doesn't have a timeout period. Tasks transition to and from the Suspended state through explicit API calls. 
   - Tasks that are Suspended cannot not transition directly to a Running state - they must become Ready first.
 
-
+ 
 
 
 
@@ -50,6 +50,17 @@ Task controls allow you to affect the behavior for how your task processes. The 
 Some of the task controls specify the number of *ticks* the control is in effect. One tick equals one CPU cycle. For example, a 1 hz CPU processes on cycle, or 1 tick, per second. As well, a 240 Mhz single core processor, processes 240,000,000 cycles per second.
 {{% /notice %}}
 
+> FROM RASHED: 
+> For task control, we should cover the following:
+> •	xTaskCreatePinnedToCore this is a modified version of the vanilla FreeRTOS xTaskCreate which accepts an additional argument since the ESP32 is dual core.
+> •	vTaskSuspend
+> •	vTaskDelay
+> •	vTaskResume
+> •	vTaskDelete
+
+> For task communications the two below is sufficient for someone starting off, a nice to have is xTaskNotify if we can squeeze that in since that’s a newer more performant way of communicating simple things among tasks:
+> •	Queues
+> •	Semaphores/Mutexes
 
 
 - `xTaskCreate` creates a new task and adds it to the list of tasks that are in a *Ready* state. The following provides an example of this control: 

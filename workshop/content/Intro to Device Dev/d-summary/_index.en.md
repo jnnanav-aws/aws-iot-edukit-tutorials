@@ -1,13 +1,13 @@
 +++
-title = "Closing"
+title = "Summary"
 weight = 40
 pre = "<b>d. </b>"
 +++
 
-
-> overview of the course
-> what we will do / accomplish
-> why it's important
+> Course Introduction
+>    * What is IoT?
+>    * Why would you want to use it? 
+>    * What are common solutions? (home automation) 
 
 
 

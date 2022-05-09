@@ -6,27 +6,22 @@ weight = 91
 pre = "<b>11. </b>"
 +++
 
-> brief course overview 
-> what we will accomplish 
-> why it's important
+
+This tutorial presents foundational concepts for developing applications with the {{< awsService type="edukit-short-en" >}}. Although the specifics might change when you use other devices, the concepts are transferrable.
+
+IoT has broad application. It can take many forms, and assist people and projects in unlimited ways. Because of this, exactly what IoT is and what it can accomplish can be confusing. During this tutorial, we present an introduction to the Internet of Things (IoT) and discuss why it's important and what you can do with it.
+
+Developing an application for a microcontroller, requires more knowledge than simply writing commands in the Java or the C programming language and uploading it to the device. We discuss the programs that make up a toolchain and how they help convert your program into a format that the {{< awsService type="edukit-short-en" >}} can run. As well, we discuss what Board Support Packages (BSPs) are and how you can use them to control the sensors and actuators within your {{< awsService type="edukit-short-en" >}}.
+
+Finally, the last lesson discusses strategies to run your applications. We also talk about what a real-time operating system (RTOS) is, when it's beneficial to use one, and how to ensure that critical tasks run when they must.
+
+
+To begin, continue to the [**Introduction**](intro-to-device-dev/a-introduction.html).
 
 
 
->  the students want to use the Core2 for AWS to learn more about embedded engineering, and need to learn foundational concepts before writing apps for the device.
-
-> course objectives: 
-
-> by the end of this course the students will: 
-
-> * describe the purpose and benefits to using iot in a solution
-> * describe build system components; such as, (CMake), compilers (GCC), toolchains, board support packages, and software libraries (IoT C-SDK).
-> * describe where the BSP is located and how to enable/disable features, where the API reference is located and how to utilize the APIs for their apps.
-> * describe RTOS tasks and why is an RTOS valuable in a connected embedded application.
-> * describe RTOS task controls; such as, Queues, Mutexes, Semaphores, and Event Groups.
-> * modify, compile, upload, and run a pre-written blinky application.
 
 
-As you learn  more about using the 
 
 
 ---

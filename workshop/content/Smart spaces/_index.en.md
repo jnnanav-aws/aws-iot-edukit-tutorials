@@ -5,7 +5,7 @@ weight = 50
 pre = "<b>4. </b>"
 +++
 
-In this tutorial, you will extend the smart thermostat solution from the previous module, **Smart Thermostat**, into a Smart Space solution. A smart space is the concept of using insights about a space to enhance the space or bring further capabilities to it. You will use analytics and machine learning capabilities to derive predictions from raw data about room occupancy where your smart thermostat is deployed. The Smart Space solution will guide you how to create a new machine learning model from your thermostat data and how to improve the classification of room occupancy to operate your smart thermostat even better.
+In this tutorial, you will extend the smart thermostat solution from the previous module, [**Smart Thermostat**](smart-thermostat.html), into a Smart Space solution. A smart space is the concept of using insights about a space to enhance the space or bring further capabilities to it. You will use analytics and machine learning capabilities to derive predictions from raw data about room occupancy where your smart thermostat is deployed. The Smart Space solution will guide you how to create a new machine learning model from your thermostat data and how to improve the classification of room occupancy to operate your smart thermostat even better.
 
 This tutorial requires that you have:
 - The [{{< awsService type="edukit-long-en" >}}](https://www.amazon.com/dp/B08VGRZYJR/) ({{< awsService type="edukit-short-en" >}}) device.
