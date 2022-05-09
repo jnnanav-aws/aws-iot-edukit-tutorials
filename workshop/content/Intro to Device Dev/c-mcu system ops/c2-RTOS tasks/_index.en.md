@@ -20,7 +20,6 @@ An RTOS task can exist in one of four states:
 - *Ready*: When a task is able to run and are not currently utilizing the processor, they are in a Ready state. Commonly, they are in this state because a task with a higher priority is currently in the Running state.
 
 
-
 - *Blocked*: A task is Blocked if it cannot run because it is waiting for an event - a specific time (in the case of the temperature reading), an external input (in the case of the automatic door), or their turn in the queue. 
   - Blocked tasks have a *"timeout"* period, which gives them time for the event to occur. The task transitions to a Ready state after the timeout period whether the event has occurred or not. 
   - Tasks that are Blocked cannot not transition directly to a Running state - they must become Ready first.
@@ -45,9 +44,166 @@ An RTOS task can exist in one of four states:
 
 ## Task controls
 
+Task controls allow you to affect the behavior for how your task processes. The following outlines some common task controls: 
+
+{{% notice info %}}
+Some of the task controls specify the number of *ticks* the control is in effect. One tick equals one CPU cycle. For example, a 1 hz CPU processes on cycle, or 1 tick, per second. As well, a 240 Mhz single core processor, processes 240,000,000 cycles per second.
+{{% /notice %}}
 
 
 
+- `xTaskCreate` creates a new task and adds it to the list of tasks that are in a *Ready* state. The following provides an example of this control: 
+
+```
+void vAFunction( void )
+ {
+ TaskHandle_t xHandle;
+
+     // Create a task, storing the handle.
+     xTaskCreate( vTaskCode, "NAME", STACK_SIZE, NULL, tskIDLE_PRIORITY, &xHandle );
+
+...
+}
+```
+
+
+
+
+
+- `xTaskCreatePinnedToCore` can be used in a CPU with multiple cores. For example, the {{< awsService type="edukit-short-en" >}} is a dual processor. This control creates a new task, adds it to the list of tasks that are in a *Ready* state, and specifies which core should process it. 
+
+
+```
+void vAFunction( void )
+ {
+ TaskHandle_t xHandle;
+
+     // Create a task, storing the handle.
+     xTaskCreatePinnedToCore( vTaskCode, "NAME", STACK_SIZE, NULL, tskIDLE_PRIORITY, 0, &xHandle );
+
+...
+}
+```
+
+
+
+
+
+
+
+
+
+- `vTaskDelay` changes the task's status to *Blocked* for a specific number of ticks. The amount of time  that `vTaskDelay` affects a task depends on the CPU tick rate. Because the amount of time is specific to the MCU's clock cycle, you can imagine that this control is challenging to configure if you want to block the task for a specific amount of time. 
+
+```
+ void vTaskFunction( void * pvParameters )
+ {
+ /* Block for 500ms. */
+
+ const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+     for( ;; )
+     {
+         /* Simply toggle the LED every 500ms, blocking between each toggle. */
+         vToggleLED();
+         vTaskDelay( xDelay );
+     }
+}
+```
+
+
+
+
+
+
+
+- `vTaskDelete` removes a task from the RTOS kernels management; including all *Ready*, *Blocked*, *Suspended*, and event lists. The following provides an example of this control: 
+
+```
+ void vOtherFunction( void )
+ {
+ TaskHandle_t xHandle = NULL;
+
+     // Create the task, storing the handle.
+     xTaskCreate( vTaskCode, "NAME", STACK_SIZE, NULL, tskIDLE_PRIORITY, &xHandle );
+
+     // Use the handle to delete the task.
+     if( xHandle != NULL )
+     {
+         vTaskDelete( xHandle );
+     }
+ }
+```
+
+
+
+
+
+
+
+- `vTaskSuspend` places a task into the *Suspended* state. The following provides an example of this control *(note: `vTaskResume` extends this example to show how a task can be suspended and then resumed)*:
+
+```
+void vAFunction( void )
+ {
+ TaskHandle_t xHandle;
+
+     // Create a task, storing the handle.
+     xTaskCreate( vTaskCode, "NAME", STACK_SIZE, NULL, tskIDLE_PRIORITY, &xHandle );
+
+     // ...
+
+     // Use the handle to suspend the created task.
+     vTaskSuspend( xHandle );
+
+     // ...
+
+
+ }
+```
+
+
+
+
+
+
+
+
+- `vTaskResume` resumes a suspended task by placing it into the *Ready* state. The following provides an example of this control:
+
+```
+void vAFunction( void )
+ {
+ TaskHandle_t xHandle;
+
+     // Create a task, storing the handle.
+     xTaskCreate( vTaskCode, "NAME", STACK_SIZE, NULL, tskIDLE_PRIORITY, &xHandle );
+
+     // ...
+
+     // Use the handle to suspend the created task.
+     vTaskSuspend( xHandle );
+
+     // ...
+
+     // The created task will not run during this period, unless
+     // another task calls vTaskResume( xHandle ).
+
+     //...
+
+     // Resume the suspended task ourselves.
+     vTaskResume( xHandle );
+
+     // The created task will once again get microcontroller processing
+     // time in accordance with its priority within the system.
+ }
+```
+
+
+
+
+
+
+For more information, see FreeRTOS: [API Reference, Task Control](https://www.freertos.org/a00112.html). 
 
 
 ## Inter-task communication and task synchronization
@@ -64,6 +220,10 @@ An RTOS task can exist in one of four states:
 >     * Queues
 >     * Mutexes / Semaphores
 >     * Event Groups
+
+
+
+
 >     * (possible) CHECK IN: summarize key points in a quick review
 
 
