@@ -4,10 +4,7 @@ weight = 40
 pre = "<b>d. </b>"
 +++
 
-> Course Introduction
->    * What is IoT?
->    * Why would you want to use it? 
->    * What are common solutions? (home automation) 
+> short summary and establish relevance to each of the key sections in this course
 
 
 

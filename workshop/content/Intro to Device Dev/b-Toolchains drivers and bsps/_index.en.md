@@ -5,10 +5,7 @@ weight = 20
 pre = "<b>b. </b>"
 +++
 
-> Course Introduction
->    * What is IoT?
->    * Why would you want to use it? 
->    * What are common solutions? (home automation) 
+> short intro duction to tollchains and bsps - just a lead in.
 
 
 ---

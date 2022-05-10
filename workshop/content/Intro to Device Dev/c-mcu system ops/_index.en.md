@@ -5,10 +5,7 @@ weight = 30
 pre = "<b>c. </b>"
 +++
 
-> Course Introduction
->    * What is IoT?
->    * Why would you want to use it? 
->    * What are common solutions? (home automation) 
+> short overview of mcu and rtos introduction. just a lead in
 
 
 
