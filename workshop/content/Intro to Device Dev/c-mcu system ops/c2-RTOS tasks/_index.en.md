@@ -46,12 +46,6 @@ An RTOS task can exist in one of four states:
 
 Task controls allow you to affect the behavior for how your task processes. The following outlines some common task controls: 
 
-{{% notice info %}}
-Some of the task controls specify the number of *ticks* the control is in effect. One tick equals one CPU cycle. For example, a 1 hz CPU processes on cycle, or 1 tick, per second. As well, a 240 Mhz single core processor, processes 240,000,000 cycles per second.
-{{% /notice %}}
-
-
-
 
 - `xTaskCreate` creates a new task and adds it to the list of tasks that are in a *Ready* state. The following provides an example of this control: 
 
@@ -71,7 +65,7 @@ void vAFunction( void )
 
 
 
-- `xTaskCreatePinnedToCore` is similar to `xTaskCreate` and is extended so that it can be used with a CPU with multiple cores. For example, the {{< awsService type="edukit-short-en" >}} is a dual processor. This control creates a new task, adds it to the list of tasks that are in a *Ready* state, and specifies which core should process it. 
+- `xTaskCreatePinnedToCore` is similar to `xTaskCreate` and is extended so that it can be used with a MCU with multiple cores. For example, the {{< awsService type="edukit-short-en" >}} is a dual processor. This control creates a new task, adds it to the list of tasks that are in a *Ready* state, and specifies which core should process it. 
 
 
 ```
@@ -87,32 +81,29 @@ void vAFunction( void )
 ```
 
 
+- `vTaskDelay` changes the task's status to *Blocked* for a specific number of ticks. The amount of time  that `vTaskDelay` affects a task depends on the MCU tick rate. 
 
+   *Caution – over simplification:* One tick equals one MCU cycle. For example, a 1 hz MCU processes on cycle, or 1 tick, per second. As well, a 1 Mhz single core processor, processes 1,000,000 cycles per second. 
 
+   `portTICK_RATE_MS` parameter: Because the chronological value of a tick varies based on the MCU that's processing the task, this parameter converts the tick into a predictable measurement – milliseconds. 
 
+   The following provides an example of this control from the [Smart Thermostat](https://edukit.workshop.aws/en/smart-thermostat/data-acquisition.html) tutorial: 
 
-
-
-
-- `vTaskDelay` changes the task's status to *Blocked* for a specific number of ticks. The amount of time  that `vTaskDelay` affects a task depends on the CPU tick rate. Because the amount of time is specific to the MCU's clock cycle, you can imagine that this control is challenging to configure if you want to block the task for a specific amount of time. 
 
 ```
- void vTaskFunction( void * pvParameters )
- {
- /* Block for 500ms. */
+{
+  {
+    // ...
+  for (;;) {
+    MPU6886_GetTempData(&temperature);
+    temperature = (temperature * 1.8)  + 32 - 50;
+    ESP_LOGI("thermostat", "measured temperature is: %f", temperature);
 
- const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
-     for( ;; )
-     {
-         /* Simply toggle the LED every 500ms, blocking between each toggle. */
-         vToggleLED();
-         vTaskDelay( xDelay );
-     }
+    // sleep for 1000ms before continuing the loop
+    vTaskDelay(1000 / portTICK_RATE_MS);
+  }
 }
 ```
-
-
-
 
 
 
@@ -228,7 +219,7 @@ For more information, see FreeRTOS: [API Reference, Task Control](https://www.fr
 >     * Event Groups
 
 
-
+- *Queues* are the primary method that tasks communicate between each other. Queues can also be used to communicate between interrupts and tasks. In most cases they are used as thread safe buffer that operates with a *first in first out* (FIFO) strategy - meaning that new data is sent to the back of the queue by default.
 
 
 >     * (possible) CHECK IN: summarize key points in a quick review
@@ -248,7 +239,7 @@ For more information, see FreeRTOS: [API Reference, Task Control](https://www.fr
 
 
 
-For more information, see FreeRTOS: [Tasks and co-routines](https://www.freertos.org/taskandcr.html).
+For more information, see FreeRTOS: [Queues, Mutexes, and Semaphores](https://www.freertos.org/Embedded-RTOS-Queues.html) and [Tasks and co-routines](https://www.freertos.org/taskandcr.html)
 
 
 
