@@ -5,6 +5,13 @@ weight = 30
 pre = "<b>c. </b>"
 +++
 
+> Author note: TO BE WRITTEN
+> 
+
+
+
+
+
 > short overview of mcu and rtos introduction. just a lead in
 
 

@@ -4,6 +4,14 @@ weight = 20
 pre = "› "
 +++
 
+> Author note: TO BE WRITTEN
+> 
+
+
+
+
+
+
 >  COURSE KNOWLEDGE CHECK (to reinforce:) (10 min) 
 >     * when using Iot might help a solution
 >     * rtos verus super loop or ISR

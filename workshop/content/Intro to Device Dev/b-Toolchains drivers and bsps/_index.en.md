@@ -5,7 +5,11 @@ weight = 20
 pre = "<b>b. </b>"
 +++
 
-> short intro duction to tollchains and bsps - just a lead in.
+> Author note: TO BE WRITTEN
+>
+>
+> short introduction to tollchains and bsps - just a lead in.
+> 
 
 
 ---

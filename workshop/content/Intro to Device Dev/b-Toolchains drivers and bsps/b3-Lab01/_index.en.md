@@ -4,6 +4,12 @@ weight = 30
 pre = "› "
 +++
 
+> Author note: TO BE WRITTEN
+> 
+
+
+
+
 > Lab: Using Cloud9, create a repo from template, prepare the student’s account, use C9 to introspect folders and create an application that simply turns on LED via the BSP API. Compiled binary is uploaded to the device. (10 min) 
 
 

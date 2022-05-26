@@ -5,6 +5,11 @@ weight = 30
 pre = "› "
 +++
 
+> Author note: TO BE WRITTEN
+> 
+
+
+
 
 > LAB: using Cloud9 and the repo that the students created, submit code to the Core2 for AWS device. Make changes to the code to change behaviors on the device. (15 min)
 

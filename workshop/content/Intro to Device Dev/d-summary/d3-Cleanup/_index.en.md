@@ -4,6 +4,10 @@ weight = 30
 pre = "› "
 +++
 
+> Author note: TO BE WRITTEN
+> 
+
+
 
 > course clean up - only if there are entities within the aws account or on the student's computers that might not be needed again or cost money if it was "left on"
 

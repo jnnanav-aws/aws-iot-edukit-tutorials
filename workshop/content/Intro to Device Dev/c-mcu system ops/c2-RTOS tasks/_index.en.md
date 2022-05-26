@@ -200,6 +200,10 @@ For more information, see FreeRTOS: [API Reference, Task Control](https://www.fr
 
 ## Inter-task communication and task synchronization
 
+> Author note: TO BE WRITTEN (WIP)
+> 
+
+
 
 
 
