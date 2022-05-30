@@ -16,7 +16,7 @@ Developing an application for a microcontroller, requires more knowledge than si
 Finally, the last lesson discusses strategies to run your applications. We also talk about what a real-time operating system (RTOS) is, when it's beneficial to use one, and how to ensure that critical tasks run when they must.
 
 
-To begin, continue to the [**Introduction**](intro-to-device-dev/a-introduction.html).
+To begin, continue to the [**Introduction**](intro-to-device-dev/a-introduction.html) lesson.
 
 
 

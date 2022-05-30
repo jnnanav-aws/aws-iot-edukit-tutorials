@@ -4,9 +4,6 @@ title = "Introduction to RTOS tasks"
 weight = 20
 pre = "› "
 +++
-> {{< otherService type="freertos-short-en" >}}
-
-
 
 RTOS applications can be structured as a set of tasks that run independently and do not rely on other tasks within the system. The RTOS scheduler is responsible to determine which task runs and in what order. Remember that the MCU is single threaded and runs only one task at a time. In order to accomplish running tasks asynchronously, the RTOS scheduler must start and stop each task several times as the application runs. Finally, the RTPS scheduler is responsible to ensure that the task is reinstated in the same state, or *context*, that it was when it was swapped. To achieve this each task is provided with its own stack. When the task is swapped out the execution context is saved to the stack of that task so it can also be exactly restored when the same task is later swapped back in.
 
