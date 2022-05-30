@@ -1,5 +1,5 @@
 +++
-title = "Knowledge Check"
+title = "Knowledge check"
 weight = 20
 pre = "› "
 +++
