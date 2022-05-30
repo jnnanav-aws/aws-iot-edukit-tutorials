@@ -6,6 +6,11 @@ pre = "› "
 +++
 
 
+> Author note: TO BE WRITTEN
+> 
+
+
+
 >  LAB: MQTT communication and updating policies
 >     * Register device / or use pre-registered device, 
 >     * Core2 for AWS publishes topic that’s received

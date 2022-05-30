@@ -5,6 +5,8 @@ weight = 20
 pre = "› "
 +++
 
+> Author note: TO BE WRITTEN
+> 
 
 >  KNOWLEDGE CHECK.
 >     * topic structure

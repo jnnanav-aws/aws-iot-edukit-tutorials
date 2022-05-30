@@ -4,7 +4,8 @@ title = "Authorization grants"
 weight = 20
 pre = "› "
 +++
-
+> Author note: TO BE WRITTEN
+> 
 
 >  Authorization grants to cloud services via policy documents.
 

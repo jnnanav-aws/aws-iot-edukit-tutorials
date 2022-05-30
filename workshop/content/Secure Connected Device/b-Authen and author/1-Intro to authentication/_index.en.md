@@ -7,7 +7,7 @@ pre = "› "
 
 >  
 > << author note >>
-> you need an introductory sentence or two that ties these topics together
+> write an introductory sentence or two that ties these topics together
 >  
 
 ### Introduction to transport layer security ###

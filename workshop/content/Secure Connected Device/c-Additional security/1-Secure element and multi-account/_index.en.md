@@ -5,6 +5,9 @@ weight = 10
 pre = "› "
 +++
 
+> Author note: TO BE WRITTEN
+> 
+
 
 > Deep dive on secure element and Multi-Account Registration flow.
 
