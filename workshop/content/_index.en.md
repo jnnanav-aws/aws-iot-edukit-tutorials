@@ -32,10 +32,16 @@ The {{< awsService type="edukit-short-en" >}} device supports a wide range of ap
 ### How it works
 To begin, purchase your {{< awsService type="edukit-long-en" >}} from [Amazon.com](https://www.amazon.com/dp/B08VGRZYJR/) (US), [M5Stack store](https://m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit) (CN/Global), [Digi-Key](https://www.digikey.com/en/products/detail/m5stack-technology-co-ltd/K010-AWS/13562927) (AMER/Global), [Mouser Electronics](https://www.mouser.com/ProductDetail/M5Stack/K010-AWS?qs=%2Fha2pyFaduh2vnlTOLWOXVDYhV94RvwKuua4BUEreQw%3D) (AMER/Global), [Switch Science](https://www.switch-science.com/catalog/6784/) (JP), or [Distrelec](https://www.distrelec.biz/en/esp32-m5core2-iot-development-kit-for-aws-iot-edukit-m5stack-k010-aws/p/30196462) (EU).
 
-Once you receive the hardware kit, access the [getting started tutorial](https://edukit.workshop.aws/en/getting-started.html) and follow the steps in the Prerequisites lesson to install the ESP RainMaker Agent firmware on the device, and the ESP RainMaker Mobile App on your mobile phone. The ESP RainMaker Mobile App will allow you to control the {{< awsService type="edukit-short-en" >}} and connect to AWS IoT. 
+Once you receive the hardware kit, access the [Getting Started](https://edukit.workshop.aws/en/getting-started.html) tutorial and follow the steps in the Prerequisites lesson to install the ESP RainMaker Agent firmware on the device, and the ESP RainMaker Mobile App on your mobile phone. The ESP RainMaker Mobile App will allow you to control the {{< awsService type="edukit-short-en" >}} and connect to AWS IoT. 
 
 
 Next, select from a list of free projects on {{< awsService type="edukit-short-en" >}}'s website. Begin with building a basic connected home application, and progress to running a machine learning model with Amazon SageMaker Autopilot. Other projects let you build a Voice Assisted Smart Home application with Alexa Voice Service Integration for AWS IoT (AFI). To learn more about the hardware specifications, see the [M5Stack Docs](https://docs.m5stack.com/#/en/core/core2_for_aws) or [Partner Device Catalog](https://devices.amazonaws.com/detail/a3G0h000007djMLEAY).
+
+
+
+
+To begin, continue to [**Getting Started**](/en/getting-started.html).
+
 
 ---
 {{% button href="https://github.com/aws-samples/aws-iot-edukit-tutorials/discussions" icon="far fa-question-circle" %}}Community support{{% /button %}} {{% button href="https://github.com/m5stack/Core2-for-AWS-IoT-EduKit/issues" icon="fas fa-bug" %}}Report bugs{{% /button %}}
