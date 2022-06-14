@@ -19,39 +19,34 @@ Complete the following steps to install OpenSSL, Git, and Git's dependencies:
 ![Git for Windows installation wizard. Choose Use the OpenSSL library](windows/git-for-windows-openssl2.png?width=450px&classes=shadow)
 
 ## Set up Silicon Labs USB-to-UART bridge
-The device communicates with the host machine through a Silicon Labs CP210x USB-to-UART bridge. The on-board CP2104 bridge facilitates host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x bridge translates through a virtual communication port on the host machine. 
+The {{< awsService type="edukit-short-en" >}} communicates with the host machine through a Silicon Labs CP210x USB-to-UART bridge. The on-board CP2104 bridge facilitates host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x bridge translates through a virtual communication port on the host machine. 
 
 Before you can mount the virtual serial port and communicate across it, you must download and install the supporting driver. Complete the following steps to install the driver for the CP2104 bridge:
-1) Ensure the device is not connected to the host machine.
+
+
+1. Ensure the device is not connected to the host machine.
 <<<<<<< HEAD
-2) Download the [Windows Silicon Labs CP210x](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip) driver. (For more information, see the [Silicon Labs, Downloads](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) page.)
-3) Extract the downloaded file.
+1. Download the [Windows Silicon Labs CP210x](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip) driver. (For more information, see the [Silicon Labs, Downloads](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) page.)
+1. Extract the downloaded file.
    {{% notice note %}}
    You must extract the contents of the folder, because the driver will not install if the executable runs within the archive. However, it is not important where you save the extracted folder on your host machine. 
-=======
-2) Download the Windows Silicon Labs CP210x driver [here](https://www.silabs.com/documents/public/software/CP210x_VCP_Windows.zip).
-3) Extract the contents of the download.
-   {{% notice info %}}
-   You must extract the contents of the folder. The driver will not install if the executable is run from within the archive.
->>>>>>> 413b1eac597d6a76e36391d7eae1e60019fc29d2
    {{% /notice %}} 
-4) **Open the folder**, right-click the **silabser.inf** file, and choose **Install**.
-5) Restart your host machine to make sure the driver is applied.
+
+
+1. **Open the folder**, right-click the **silabser.inf** file, and choose **Install**.
+2) Restart your host machine to make sure the driver is applied.
 
 <<<<<<< HEAD
 ## Install Visual Studio Code
 Visual Studio Code (VS Code) is an open source integrated development environment (IDE) that allows you to view, edit, and manage code. 
-=======
-## Python installation
-Python is an interpreted language that is used by the PlatformIO installer that you'll run later. If you don't have Python installed on your host machine, download it from [here](https://www.python.org/downloads/). Make sure that the option to "Add Python to PATH" is checked.
+
+
+1. Download the latest [Visual Studio Code](https://code.visualstudio.com/) for your operating system. To troubleshoot issues with Visual Studio Code installation or usage, refer to [their documentation](https://code.visualstudio.com/docs/setup/setup-overview).
+
+## Install Python
+Python is an interpreted language that is used by the PlatformIO installer that you'll run later. If you don't have Python installed on your host machine, download it from [Python](https://www.python.org/downloads/). During the installation process, be sure to select the "Add Python to PATH" option.
 
 {{< img "python_installer-add_to_path.en.png" "Check Add Python to PATH" >}}
-
-## Visual Studio Code installation
-Visual Studio Code (VS Code) is an open source integrated development environment (IDE) that allows you to view, edit, and manage code and more. Download the latest [Visual Studio Code](https://code.visualstudio.com/) for your operating system. To troubleshoot issues with Visual Studio Code installation or usage, refer to [their documentation](https://code.visualstudio.com/docs/setup/setup-overview).
->>>>>>> 413b1eac597d6a76e36391d7eae1e60019fc29d2
-
-* Download and install the latest [VS Code](https://code.visualstudio.com/) software for your operating system. To troubleshoot issues with Visual Studio Code's installation or use, refer to [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) in their documentation.
 
 ## Install PlatformIO
 [PlatformIO](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) (PIO) provides a professional embedded development platform that simplifies embedded software development. This VS Code extension combines the functionality of the Platform IO command line interface (CLI) with a graphical user interface (GUI). 

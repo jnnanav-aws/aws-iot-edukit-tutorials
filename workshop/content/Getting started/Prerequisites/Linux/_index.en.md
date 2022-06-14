@@ -4,13 +4,22 @@ linkTitle = "Linux"
 title = "Ubuntu Linux v18.0+ Setup Instructions"
 +++
 
-This lesson shows you how to set up your linux computer (host machine) to be able to download the code from the GitHub repository, view and edit the code, compile it to be usable by the hardware, and upload it to the hardware's flash memory. These installation steps are sufficient for the **Getting Started** tutorial, which uses Espressif's AWS account and services for the ESP RainMaker platform.
+This lesson guides you through configuring your linux computer (host machine) to download, view, and edit the code from the {{< awsService type="edukit-short-en" >}} GitHub repository. After you complete these steps, your computer is ready to compile and upload code to the hardware's flash memory. These steps are required to install the ESP RainMaker agent.
 
 ## Install dependencies
-In order to download the code, [compile the code](https://en.wikipedia.org/wiki/Object_code), and run scripts to download future dependencies using the [Python programming language's package installer](https://pip.pypa.io/en/stable/), you'll need to install some dependency libraries or applications first. To download the code from the remote code repository on GitHub, you'll need to install [git](https://git-scm.com/). To compile the code, Espressif uses the [cmake](https://cmake.org/) build system to parse the configuration of the device application and the [gcc compiler](https://gcc.gnu.org/onlinedocs/gcc/) to compile the firmware to object code that the {{< awsService type="edukit-short-en" >}} can understand and run. All the dependencies can be easily installed using apt via the following command in terminal:
+First, install dependency libraries and applications so that you can use the [Python programming language's package installer](https://pip.pypa.io/en/stable/) to download, [compile](https://en.wikipedia.org/wiki/Object_code), and run required scripts. 
+
+Issue the following command in a terminal:
 ```bash
 sudo apt install build-essential python3-pip curl git cmake
 ```
+Next, install [git](https://git-scm.com/) so that you can  download the code from the remote code repository on GitHub.
+
+
+To compile the code, Espressif uses the [cmake](https://cmake.org/) build system to parse the configuration of the device application and the [gcc compiler](https://gcc.gnu.org/onlinedocs/gcc/) to compile the firmware to object code that the {{< awsService type="edukit-short-en" >}} can understand and run. 
+
+
+All the dependencies can be easily installed using apt via the 
 
 ## Silicon Labs USB to UART bridge setup
 The device communicates with the host machine through a Silicon Labs CP210x USB to UART bridge. The on-board CP2104 is an USB-to-UART bridge to facilitate host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x translates through a virtual communications port on the host machine it establishes over USB-C.

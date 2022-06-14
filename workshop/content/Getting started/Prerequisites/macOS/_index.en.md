@@ -1,20 +1,23 @@
 +++
 pre = "› "
 linkTitle = "macOS"
-title = "MacOS 10.14+ Setup Instructions"
+title = "MacOS 10.14+ Set Up Instructions"
 +++
 
 This lesson guides you through configuring your macOS computer (host machine) to download, view, and edit the code from the {{< awsService type="edukit-short-en" >}} GitHub repository. After you complete these steps, your computer is ready to compile and upload code to the hardware's flash memory. These steps are required to install the ESP RainMaker agent.
 
-## Silicon Labs USB to UART bridge setup
-The {{< awsService type="edukit-short-en" >}} communicates with the host machine through a Silicon Labs CP210x USB to UART bridge. The on-board CP2104 is an USB-to-UART bridge that facilitates host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x translates through a virtual communications port on the host machine it establishes over USB-C. To be able to mount the virtual serial port and communicate across it, you must download and install the corresponding driver.
+## Set up Silicon Labs USB-to-UART bridge
+The {{< awsService type="edukit-short-en" >}} communicates with the host machine through a Silicon Labs CP210x USB to UART bridge.  The on-board CP2104 bridge facilitates host communication with the ESP32-D0WD microcontroller. The microcontroller communicates bi-directionally over [UART](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/uart.html)0, which the CP210x bridge translates through a virtual communication port on the host machine. 
 
-1) Ensure the device is not connected to host machine.
-2) Download the macOS Silicon Labs CP210x driver [here](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip).
-3) Extract the contents of the download, mount the **SiLabsUSBDriverDisk.dmg** disk image.
-4) Run the **Install C210x VCP Driver** installer.
+Before you can mount the virtual serial port and communicate across it, you must download and install the supporting driver. Complete the following steps to install the driver for the CP2104 bridge:
+
+
+1. Ensure the device is not connected to host machine.
+1. Download the macOS Silicon Labs CP210x driver [here](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip).
+1. Extract the contents of the download, mount the **SiLabsUSBDriverDisk.dmg** disk image.
+1. Run the **Install C210x VCP Driver** installer.
    - On macOS 10.13 and later, the installation of the SiLabs system extension may be blocked. To unblock, open your Mac's **System Preferences** <i class="fas fa-arrow-right"></i> **Security & Privacy** pane, unlock changes by clicking the <i class="fas fa-lock"></i>, **allow** the developer, and then relock by clicking the <i class="fas fa-lock-open"></i>. For more information, see [Apple Technical Note TN2459](https://developer.apple.com/library/archive/technotes/tn2459/_index.html).
-5) Restart your host machine now to ensure the driver is applied.
+1. Restart your host machine now to ensure the driver is applied.
 
 ## Visual Studio Code installation
 Visual Studio Code (VS Code) is an open source integrated development environment (IDE) which allows you to view, edit, and manage code and more. Download the latest [Visual Studio Code](https://code.visualstudio.com/) for your operating system. To troubleshoot issues with Visual Studio Code installation or usage, please refer to [their documentation](https://code.visualstudio.com/docs/setup/setup-overview).
