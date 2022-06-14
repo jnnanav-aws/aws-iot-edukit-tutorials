@@ -13,10 +13,14 @@ Before you can mount the virtual serial port and communicate across it, you must
 
 
 1. Ensure the device is not connected to host machine.
-1. Download the macOS Silicon Labs CP210x driver [here](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip).
+
+1. Download the [macOS Silicon Labs CP210x](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip) driver. (For more information, see the [Silicon Labs, Downloads](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) page.)
+
 1. Extract the contents of the download, mount the **SiLabsUSBDriverDisk.dmg** disk image.
+
 1. Run the **Install C210x VCP Driver** installer.
    - On macOS 10.13 and later, the installation of the SiLabs system extension may be blocked. To unblock, open your Mac's **System Preferences** <i class="fas fa-arrow-right"></i> **Security & Privacy** pane, unlock changes by clicking the <i class="fas fa-lock"></i>, **allow** the developer, and then relock by clicking the <i class="fas fa-lock-open"></i>. For more information, see [Apple Technical Note TN2459](https://developer.apple.com/library/archive/technotes/tn2459/_index.html).
+
 1. Restart your host machine now to ensure the driver is applied.
 
 ## Visual Studio Code installation

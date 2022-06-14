@@ -25,7 +25,7 @@ Before you can mount the virtual serial port and communicate across it, you must
 
 
 1. Ensure the device is not connected to the host machine.
-<<<<<<< HEAD
+
 1. Download the [Windows Silicon Labs CP210x](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip) driver. (For more information, see the [Silicon Labs, Downloads](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) page.)
 1. Extract the downloaded file.
    {{% notice note %}}
