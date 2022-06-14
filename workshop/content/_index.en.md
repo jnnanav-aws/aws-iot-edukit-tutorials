@@ -34,6 +34,7 @@ To begin, purchase your {{< awsService type="edukit-long-en" >}} from [Amazon.co
 
 Once you receive the hardware kit, access the [getting started tutorial](https://edukit.workshop.aws/en/getting-started.html) and follow the steps in the Prerequisites lesson to install the ESP RainMaker Agent firmware on the device, and the ESP RainMaker Mobile App on your mobile phone. The ESP RainMaker Mobile App will allow you to control the {{< awsService type="edukit-short-en" >}} and connect to AWS IoT. 
 
+
 Next, select from a list of free projects on {{< awsService type="edukit-short-en" >}}'s website. Begin with building a basic connected home application, and progress to running a machine learning model with Amazon SageMaker Autopilot. Other projects let you build a Voice Assisted Smart Home application with Alexa Voice Service Integration for AWS IoT (AFI). To learn more about the hardware specifications, see the [M5Stack Docs](https://docs.m5stack.com/#/en/core/core2_for_aws) or [Partner Device Catalog](https://devices.amazonaws.com/detail/a3G0h000007djMLEAY).
 
 ---
